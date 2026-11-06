@@ -1,0 +1,354 @@
+[
+  {
+    "country": "Ukraine",
+    "iso": "UA",
+    "locale": "uk",
+    "privacy_regime_assumed": "Закон України «Про захист персональних даних»",
+    "verification": "legal text drafted; supplement ad rules (Закон «Про рекламу», ст. 21) researched via secondary sources only",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Poland",
+    "iso": "PL",
+    "locale": "pl",
+    "privacy_regime_assumed": "GDPR + UODO",
+    "verification": "GDPR text drafted; EU claims rules (Reg. 1924/2006) researched; national supplement-ad rules NOT yet checked",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Portugal",
+    "iso": "PT",
+    "locale": "pt",
+    "privacy_regime_assumed": "GDPR + CNPD",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Spain",
+    "iso": "ES",
+    "locale": "es",
+    "privacy_regime_assumed": "GDPR + AEPD",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Romania",
+    "iso": "RO",
+    "locale": "ro",
+    "privacy_regime_assumed": "GDPR + ANSPDCP",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Bulgaria",
+    "iso": "BG",
+    "locale": "bg",
+    "privacy_regime_assumed": "GDPR + КЗЛД",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Croatia",
+    "iso": "HR",
+    "locale": "hr",
+    "privacy_regime_assumed": "GDPR + AZOP",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Estonia",
+    "iso": "EE",
+    "locale": "et",
+    "privacy_regime_assumed": "GDPR + AKI",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Hungary",
+    "iso": "HU",
+    "locale": "hu",
+    "privacy_regime_assumed": "GDPR + NAIH",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Latvia",
+    "iso": "LV",
+    "locale": "lv",
+    "privacy_regime_assumed": "GDPR + DVI",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Lithuania",
+    "iso": "LT",
+    "locale": "lt",
+    "privacy_regime_assumed": "GDPR + VDAI",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Slovakia",
+    "iso": "SK",
+    "locale": "sk",
+    "privacy_regime_assumed": "GDPR + ÚOOÚ SR",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Slovenia",
+    "iso": "SI",
+    "locale": "sl",
+    "privacy_regime_assumed": "GDPR + IP-RS",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Czech Republic",
+    "iso": "CZ",
+    "locale": "cs",
+    "privacy_regime_assumed": "GDPR + ÚOOÚ",
+    "verification": "same as Poland",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Italy",
+    "iso": "IT",
+    "locale": "it",
+    "privacy_regime_assumed": "GDPR + Garante",
+    "verification": "same as Poland (confirm Italy is in the partner GEO list)",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Georgia",
+    "iso": "GE",
+    "locale": "ka",
+    "privacy_regime_assumed": "Law on Personal Data Protection",
+    "verification": "NOT verified from primary sources",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Armenia",
+    "iso": "AM",
+    "locale": "hy",
+    "privacy_regime_assumed": "Law on Protection of Personal Data",
+    "verification": "NOT verified from primary sources",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Kazakhstan",
+    "iso": "KZ",
+    "locale": "kk",
+    "privacy_regime_assumed": "Law No. 94-V on personal data",
+    "verification": "partly verified (secondary sources); RU variant needed",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Uzbekistan",
+    "iso": "UZ",
+    "locale": "uz",
+    "privacy_regime_assumed": "Law ZRU-547 on personal data",
+    "verification": "NOT verified; data-localisation requirement must be checked",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Indonesia",
+    "iso": "ID",
+    "locale": "id",
+    "privacy_regime_assumed": "UU PDP 27/2022; BPOM Reg. 34/2022",
+    "verification": "partly verified (secondary sources)",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Malaysia",
+    "iso": "MY",
+    "locale": "ms",
+    "privacy_regime_assumed": "PDPA 2010",
+    "verification": "NOT verified for supplement ad rules",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Thailand",
+    "iso": "TH",
+    "locale": "th",
+    "privacy_regime_assumed": "PDPA 2019; Food Act s.41 prior approval of claims",
+    "verification": "partly verified (secondary sources); benefit claims need Thai FDA approval",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Pakistan",
+    "iso": "PK",
+    "locale": "ur",
+    "privacy_regime_assumed": "no general law confirmed",
+    "verification": "NOT verified",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Kenya",
+    "iso": "KE",
+    "locale": "sw",
+    "privacy_regime_assumed": "Data Protection Act 2019 (ODPC)",
+    "verification": "NOT verified; English variant also needed",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Algeria",
+    "iso": "DZ",
+    "locale": "ar",
+    "privacy_regime_assumed": "Law 18-07",
+    "verification": "NOT verified; French/Arabic variants",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Morocco",
+    "iso": "MA",
+    "locale": "ar",
+    "privacy_regime_assumed": "Law 09-08 (CNDP)",
+    "verification": "NOT verified; French/Arabic variants",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Tunisia",
+    "iso": "TN",
+    "locale": "ar",
+    "privacy_regime_assumed": "Organic Law 2004-63 (INPDP)",
+    "verification": "NOT verified; French/Arabic variants",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Moldova",
+    "iso": "MD",
+    "locale": "ro",
+    "privacy_regime_assumed": "needs Moldova-specific text (Romanian ANSPDCP text is wrong for MD)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Mexico",
+    "iso": "MX",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Argentina",
+    "iso": "AR",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Chile",
+    "iso": "CL",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Colombia",
+    "iso": "CO",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Peru",
+    "iso": "PE",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Ecuador",
+    "iso": "EC",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Costa Rica",
+    "iso": "CR",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "El Salvador",
+    "iso": "SV",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Guatemala",
+    "iso": "GT",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Honduras",
+    "iso": "HN",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Venezuela",
+    "iso": "VE",
+    "locale": "es-419",
+    "privacy_regime_assumed": "needs LatAm Spanish variant (country law differs)",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Cote d'Ivoire",
+    "iso": "CI",
+    "locale": "fr-africa",
+    "privacy_regime_assumed": "needs francophone Africa variant",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Senegal",
+    "iso": "SN",
+    "locale": "fr-africa",
+    "privacy_regime_assumed": "needs francophone Africa variant",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Philippines",
+    "iso": "PH",
+    "locale": "en-global",
+    "privacy_regime_assumed": "needs English (and for RW French) variant",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Uganda",
+    "iso": "UG",
+    "locale": "en-global",
+    "privacy_regime_assumed": "needs English (and for RW French) variant",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  },
+  {
+    "country": "Rwanda",
+    "iso": "RW",
+    "locale": "en-global",
+    "privacy_regime_assumed": "needs English (and for RW French) variant",
+    "verification": "TODO",
+    "ad_copy_approved": false
+  }
+]

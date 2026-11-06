@@ -1,0 +1,8 @@
+{
+  "name": "useful-habit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Useful Habit — static multilingual site",
+  "scripts": { "build": "node scripts/build-static.js" },
+  "devDependencies": { "jsdom": "^26.0.0" }
+}

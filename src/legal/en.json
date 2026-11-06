@@ -1,0 +1,108 @@
+{
+  "privacy": {
+    "t": "Privacy Policy",
+    "s": [
+      [
+        "Who we are",
+        "This Policy explains how Useful Habit (the “Site”, “we”) processes personal data of its visitors. Controller: Useful Habit, contact: useful.habit@outlook.com. The Site is operated from Ukraine. Where the GDPR applies to you, we process your data in line with Regulation (EU) 2016/679 (GDPR) and applicable national law."
+      ],
+      [
+        "Data we process",
+        "Data you provide:|name, phone number, email address and message, if you write to us or send a request form on the Site.|Data collected automatically:|IP address, device and browser type, language, pages viewed, time of visit, referrer, UTM tags and advertising click identifiers (for example gclid, fbclid);|cookies and similar technologies (section 6).|We do not ask for special categories of data, such as health data. Please do not enter such data in forms or messages."
+      ],
+      [
+        "Purposes and legal bases",
+        "We process data to:|answer your message or request (Art. 6(1)(b) GDPR, steps taken at your request, or your consent under Art. 6(1)(a));|pass your request to a partner or seller of a product when you send a form containing that notice (consent, Art. 6(1)(a));|keep the Site secure and prevent fraud and automated abuse (legitimate interests, Art. 6(1)(f), balanced against your rights);|measure traffic and improve the Site, and measure advertising (consent, Art. 6(1)(a), through the cookie banner);|comply with legal obligations (Art. 6(1)(c))."
+      ],
+      [
+        "Recipients",
+        "We do not sell your data. It may be shared with:|partners and sellers of products, only if you yourself sent them a request through a form; they act as independent controllers under their own policies;|service providers (hosting, email, spam protection, analytics and advertising services including Google and Meta), who process data on our behalf or under their own terms, within the scope of their services;|public authorities, when the law requires it."
+      ],
+      [
+        "International transfers",
+        "The Site is operated from Ukraine, outside the EU/EEA, and some providers are located outside the EEA (for example in the USA). Where required, transfers rely on safeguards under Chapter V GDPR, such as the European Commission’s standard contractual clauses, and we process data only to the extent needed for the purposes above."
+      ],
+      [
+        "Cookies",
+        "Necessary cookies make the Site work (for example, storing your language) and need no consent. Analytics and advertising cookies are set only after you give consent, which you can change or withdraw at any time as easily as you gave it, and in your browser settings. This follows the ePrivacy Directive 2002/58/EC as implemented in national law. Google and Meta process cookie data under their own policies."
+      ],
+      [
+        "Retention",
+        "We keep data no longer than necessary:|correspondence: up to 3 years;|request-form data: up to 12 months after the last contact, unless the law or a legal claim requires longer;|technical logs: up to 12 months;|cookies: for the periods stated in the consent settings.|After that, data is deleted or anonymised."
+      ],
+      [
+        "Your rights",
+        "Under GDPR you have the right to:|access your data (Art. 15) and receive a copy;|rectification (Art. 16);|erasure (Art. 17);|restriction of processing (Art. 18);|data portability (Art. 20);|object to processing based on legitimate interests (Art. 21);|withdraw consent at any time, without affecting earlier processing (Art. 7(3));|lodge a complaint with the supervisory authority in your country of residence, place of work or place of the alleged infringement (Art. 77).|To exercise your rights, write to useful.habit@outlook.com. We do not make decisions based solely on automated processing that produce legal effects for you."
+      ],
+      [
+        "Security",
+        "We use reasonable organisational and technical measures, including HTTPS and restricted access. No transmission over the internet is completely secure."
+      ],
+      [
+        "Minors",
+        "The Site is not intended for persons under 18 and we knowingly collect no data from them. If you believe a child has sent us data, write to us and we will delete it."
+      ],
+      [
+        "Changes",
+        "The current version is always published on this page with its date. If a change affects processing that requires consent, we will apply it only after obtaining new consent."
+      ],
+      [
+        "Contact",
+        "For data protection questions, write to useful.habit@outlook.com."
+      ]
+    ]
+  },
+  "terms": {
+    "t": "Terms of Use",
+    "s": [
+      [
+        "General",
+        "These Terms govern your use of the Useful Habit website (the “Site”). By using the Site you accept them; if you do not, please do not use it. The Site is intended for persons aged 18 or over."
+      ],
+      [
+        "What the Site is",
+        "The Site publishes reviews, articles and tips about dietary supplements for information purposes. Useful Habit is not a manufacturer, seller or supplier of supplements, not a pharmacy and not a medical institution, and does not sell, deliver or take payment for such products."
+      ],
+      [
+        "Not medical advice",
+        "Food supplements are foods, not medicines. Our materials are general and educational and are not medical, pharmaceutical, dietary or other professional advice. We do not present any food supplement as able to prevent, treat or cure a disease. Where we mention a health-related statement, it is either an authorised health claim within the meaning of Regulation (EC) No 1924/2006 or a statement of the manufacturer, which we identify as such. Before using supplements, especially during pregnancy or breastfeeding, if you take medication, have a chronic condition or an allergy, consult a doctor. Do not delay seeing a doctor or stop treatment because of anything on the Site."
+      ],
+      [
+        "No guarantees",
+        "Individual responses vary. We do not guarantee any result from the products discussed, or that the materials are complete, error-free or up to date, although we aim for that."
+      ],
+      [
+        "Commercial relationships",
+        "The Site may contain links to third-party resources and commercial relationships with them. If we may receive compensation (for example a commission or payment for a referred request or purchase), we state this in the material before you follow the link. Compensation does not change the facts we present, but you should bear in mind that we may have a financial interest."
+      ],
+      [
+        "Third-party sellers and products",
+        "Price, terms, availability, composition, labelling, delivery, returns and quality of products are determined and provided by their sellers and manufacturers. Any purchase contract is concluded directly with them, and their terms and privacy policies apply, including any statutory consumer rights such as a right of withdrawal. Check them before buying. We do not control third-party resources and are not responsible for their content or actions."
+      ],
+      [
+        "Rules of use",
+        "You agree not to:|use the Site unlawfully or in breach of third-party rights;|interfere with the Site, bypass its protection or scrape it with automated tools without permission;|send false data or data of other persons without their consent;|distribute malicious software."
+      ],
+      [
+        "Intellectual property",
+        "Texts, design, the Useful Habit logo and other materials are protected by copyright. Copying, distribution and adaptation without written permission are prohibited, except quotation to the extent permitted by law with a reference to the Site. Product names and trademarks belong to their owners and are used only for identification."
+      ],
+      [
+        "Liability",
+        "To the extent permitted by applicable law, we are not liable for losses resulting from use of the information on the Site, its unavailability or the acts of third parties. Nothing in these Terms excludes or limits liability that cannot be excluded or limited by law, including liability for intent or gross negligence, for death or personal injury, or your mandatory consumer rights."
+      ],
+      [
+        "Changes",
+        "We may change the Site and these Terms. The new version applies from its publication on this page with the date shown; continued use means acceptance."
+      ],
+      [
+        "Governing law and disputes",
+        "These Terms are governed by the law of Ukraine, without depriving you of the mandatory consumer protection provisions of the country where you habitually reside. If you are a consumer in the EU, you may bring proceedings in the courts of your country of residence. We will first try to resolve any complaint by agreement."
+      ],
+      [
+        "Contact",
+        "Write to us with any question or complaint at useful.habit@outlook.com."
+      ]
+    ]
+  }
+}
