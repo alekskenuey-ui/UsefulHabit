@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Умови використання — Useful Habit</title>
+  <meta name="description" content="Умови використання сайту Useful Habit: правила взаємодії, авторські права на контент та правила використання інтерактивних форм." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://usefulhabit.com/terms/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://usefulhabit.com/terms/" />
+  <meta property="og:title" content="Умови використання — Useful Habit" />
+  <meta property="og:description" content="Правила взаємодії з порталом Useful Habit, авторські права та умови використання інтерактивних сервісів." />
+  <meta property="og:image" content="https://usefulhabit.com/og-image.jpg" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:site_name" content="Useful Habit" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://usefulhabit.com/#organization",
+        "name": "Useful Habit",
+        "url": "https://usefulhabit.com/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://usefulhabit.com/terms/#webpage",
+        "url": "https://usefulhabit.com/terms/",
+        "name": "Умови використання — Useful Habit",
+        "isPartOf": {"@id": "https://usefulhabit.com/#website"},
+        "publisher": {"@id": "https://usefulhabit.com/#organization"},
+        "inLanguage": "uk",
+        "dateModified": "2026-11-06",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://usefulhabit.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Умови використання", "item": "https://usefulhabit.com/terms/"}
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --clr-forest:    #0A2E1E;
+      --clr-deep:      #0D3D28;
+      --clr-mid:       #1A6B44;
+      --clr-fresh:     #2DBE6C;
+      --clr-light:     #A8DFC0;
+      --clr-bg:        #F7F9F5;
+      --clr-surface:   #EEF4EA;
+      --clr-border:    #D6E8D0;
+      --clr-text:      #1E1E1E;
+      --clr-muted:     #5A6B62;
+      --clr-white:     #FFFFFF;
+
+      --ff-display:    'DM Serif Display', Georgia, serif;
+      --ff-body:       'Inter', system-ui, sans-serif;
+
+      --radius-sm:     6px;
+      --radius-md:     12px;
+      --radius-lg:     20px;
+
+      --transition:    0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      --max-w:         1180px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--ff-body);
+      background-color: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    /* =============================================
+       HEADER
+       ============================================= */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(247, 249, 245, 0.82);
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+      border-bottom: 1px solid rgba(166, 215, 185, 0.4);
+      transition: box-shadow var(--transition);
+    }
+
+    .site-header.scrolled { box-shadow: 0 2px 24px rgba(10, 46, 30, 0.1); }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 2rem;
+    }
+
+    .logo-link { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+    .logo-img { height: 40px; width: auto; }
+
+    .logo-text {
+      font-family: var(--ff-body);
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--clr-forest);
+    }
+    .logo-text strong { color: var(--clr-mid); }
+
+    .main-nav { display: flex; align-items: center; gap: 0.25rem; }
+
+    .main-nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--clr-forest);
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-sm);
+      transition: background var(--transition), color var(--transition);
+      white-space: nowrap;
+    }
+    .main-nav a:hover { background: var(--clr-surface); color: var(--clr-mid); }
+
+    .nav-cta {
+      background: var(--clr-forest) !important;
+      color: var(--clr-white) !important;
+      padding: 0.45rem 1rem !important;
+    }
+    .nav-cta:hover { background: var(--clr-mid) !important; color: var(--clr-white) !important; }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--clr-forest);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--clr-bg);
+      border-top: 1px solid var(--clr-border);
+      padding: 1rem 0 1.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--clr-forest);
+      padding: 0.7rem 1.5rem;
+      border-radius: var(--radius-sm);
+      transition: background var(--transition);
+    }
+    .mobile-menu a:hover { background: var(--clr-surface); }
+
+    @media (max-width: 860px) {
+      .main-nav { display: none; }
+      .burger { display: flex; }
+    }
+
+    /* =============================================
+       PAGE HERO
+       ============================================= */
+    .page-hero {
+      padding-top: calc(68px + clamp(3rem, 6vw, 5rem));
+      padding-bottom: clamp(2.5rem, 5vw, 4rem);
+      background: var(--clr-surface);
+      border-bottom: 1px solid var(--clr-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 50% 80% at 90% 50%, rgba(45, 190, 108, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--clr-muted);
+      margin-bottom: 1.4rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--clr-mid); transition: color var(--transition); }
+    .breadcrumb a:hover { color: var(--clr-forest); }
+    .breadcrumb-sep { color: var(--clr-border); font-size: 0.75rem; }
+
+    .page-hero-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--clr-mid);
+      background: rgba(45, 190, 108, 0.12);
+      border: 1px solid rgba(45, 190, 108, 0.3);
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--clr-forest);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      max-width: 22ch;
+    }
+
+    .page-hero-meta {
+      font-size: 0.85rem;
+      color: var(--clr-muted);
+    }
+
+    /* =============================================
+       DOCUMENT LAYOUT
+       ============================================= */
+    .doc-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: clamp(2rem, 4vw, 4rem);
+      align-items: start;
+      padding-block: clamp(3rem, 6vw, 5rem);
+    }
+
+    .doc-toc {
+      position: sticky;
+      top: 88px;
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+
+    .doc-toc-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--clr-mid);
+      margin-bottom: 1rem;
+    }
+
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.1rem; }
+
+    .toc-list a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--clr-muted);
+      padding: 0.4rem 0.6rem;
+      border-radius: var(--radius-sm);
+      line-height: 1.4;
+      transition: background var(--transition), color var(--transition);
+    }
+    .toc-list a:hover { background: var(--clr-surface); color: var(--clr-forest); }
+    .toc-list a.active {
+      background: rgba(45, 190, 108, 0.1);
+      color: var(--clr-mid);
+      font-weight: 500;
+    }
+
+    /* Legal suite links in sidebar */
+    .toc-related {
+      margin-top: 1.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--clr-border);
+    }
+
+    .toc-related-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--clr-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .toc-related ul { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+
+    .toc-related a {
+      font-size: 0.8rem;
+      color: var(--clr-mid);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: var(--radius-sm);
+      transition: background var(--transition);
+    }
+    .toc-related a:hover { background: var(--clr-surface); }
+    .toc-related a::before { content: '→'; font-size: 0.75rem; opacity: 0.6; }
+
+    .toc-updated {
+      margin-top: 1.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--clr-border);
+      font-size: 0.75rem;
+      color: var(--clr-muted);
+      line-height: 1.5;
+    }
+
+    /* =============================================
+       DOCUMENT BODY
+       ============================================= */
+    .doc-body { min-width: 0; }
+
+    /* Intro agreement banner */
+    .doc-agreement {
+      background: var(--clr-forest);
+      color: var(--clr-white);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .doc-agreement p {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      line-height: 1.75;
+      max-width: 64ch;
+      color: var(--clr-white);
+      margin-bottom: 0.6rem;
+    }
+    .doc-agreement p:last-child { margin-bottom: 0; }
+    .doc-agreement strong { color: var(--clr-fresh); font-weight: 600; }
+
+    .doc-section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 90px;
+    }
+    .doc-section:last-child { margin-bottom: 0; }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--clr-mid), var(--clr-fresh));
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 8px;
+      flex-shrink: 0;
+      margin-right: 0.65rem;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+
+    .doc-section h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      color: var(--clr-forest);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .doc-section p {
+      font-size: 0.95rem;
+      color: #3a4a40;
+      line-height: 1.8;
+      margin-bottom: 0.9rem;
+      max-width: 68ch;
+    }
+    .doc-section p:last-child { margin-bottom: 0; }
+
+    .doc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .doc-list li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.95rem;
+      color: #3a4a40;
+      line-height: 1.7;
+      max-width: 65ch;
+    }
+
+    .doc-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--clr-fresh);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.6rem;
+    }
+
+    .doc-highlight {
+      background: rgba(45, 190, 108, 0.07);
+      border-left: 3px solid var(--clr-fresh);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1rem 1.2rem;
+      margin-block: 1rem;
+    }
+
+    .doc-highlight p {
+      font-size: 0.9rem;
+      color: var(--clr-mid);
+      margin: 0;
+    }
+
+    .doc-highlight strong { color: var(--clr-forest); }
+
+    /* IP protection highlight — slightly different tint */
+    .doc-ip {
+      background: rgba(10, 46, 30, 0.05);
+      border-left: 3px solid var(--clr-forest);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1rem 1.2rem;
+      margin-block: 1rem;
+    }
+
+    .doc-ip p {
+      font-size: 0.9rem;
+      color: var(--clr-forest);
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .doc-divider {
+      border: none;
+      border-top: 1px solid var(--clr-border);
+      margin-bottom: 3rem;
+    }
+
+    /* Age restriction badge */
+    .age-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--clr-forest);
+      color: var(--clr-white);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 0.9rem;
+    }
+
+    .age-badge span {
+      background: var(--clr-fresh);
+      color: var(--clr-forest);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.1rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* Closing block linking all legal docs */
+    .doc-legal-suite {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem 2rem;
+      margin-top: 2rem;
+    }
+
+    .doc-legal-suite h3 {
+      font-family: var(--ff-display);
+      font-size: 1.05rem;
+      color: var(--clr-forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .doc-legal-suite p {
+      font-size: 0.875rem;
+      color: var(--clr-muted);
+      margin-bottom: 1rem;
+      line-height: 1.65;
+    }
+
+    .doc-legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .doc-legal-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--clr-mid);
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-md);
+      transition: border-color var(--transition), box-shadow var(--transition), color var(--transition);
+    }
+
+    .doc-legal-links a:hover {
+      border-color: var(--clr-mid);
+      color: var(--clr-forest);
+      box-shadow: 0 2px 10px rgba(10, 46, 30, 0.08);
+    }
+
+    @media (max-width: 860px) {
+      .doc-layout { grid-template-columns: 1fr; }
+      .doc-toc { position: static; }
+    }
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+    .site-footer {
+      background: var(--clr-forest);
+      color: rgba(255,255,255,0.75);
+      padding-block: clamp(3rem, 6vw, 5rem);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      max-width: 36ch;
+      margin-top: 1rem;
+    }
+
+    .footer-logo-text {
+      font-family: var(--ff-body);
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--clr-white);
+    }
+    .footer-logo-text strong { color: var(--clr-fresh); }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--clr-fresh);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .footer-col ul a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+      transition: color var(--transition);
+    }
+    .footer-col ul a:hover { color: var(--clr-white); }
+
+    .footer-disclaimer {
+      margin-block: 2.5rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .footer-disclaimer h5 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--clr-light);
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-disclaimer p {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 2rem;
+    }
+
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--clr-white); }
+
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo-link" aria-label="Useful Habit — на головну">
+          <img src="logo.png" alt="Useful Habit" class="logo-img" id="logo-img"
+               onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'" />
+          <span class="logo-text" id="logo-fallback" style="display:none"><strong>Useful</strong> Habit</span>
+        </a>
+        <nav class="main-nav" aria-label="Головне меню">
+          <a href="/">Головна</a>
+          <a href="/active-life/">Активне життя</a>
+          <a href="/metabolism/">Тонус та обмін речовин</a>
+          <a href="/beauty/">Краса та молодість</a>
+          <a href="/about/" class="nav-cta">Про нас</a>
+        </nav>
+        <button class="burger" aria-label="Відкрити меню" aria-expanded="false" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <a href="/">Головна</a>
+        <a href="/active-life/">Активне життя</a>
+        <a href="/metabolism/">Тонус та обмін речовин</a>
+        <a href="/beauty/">Краса та молодість</a>
+        <a href="/about/">Про нас</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Шлях навігації">
+          <a href="/">Головна</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Умови використання</span>
+        </nav>
+        <span class="page-hero-label">Правовий документ</span>
+        <h1>Умови використання</h1>
+        <p class="page-hero-meta">
+          Остання редакція:
+          <time datetime="2026-11-06">06 листопада 2026 року</time>
+        </p>
+      </div>
+    </div>
+
+    <!-- DOCUMENT -->
+    <div class="container">
+      <div class="doc-layout">
+
+        <!-- Main content -->
+        <article class="doc-body">
+
+          <!-- Agreement intro banner -->
+          <div class="doc-agreement">
+            <p>
+              Ласкаво просимо на інформаційний портал <strong>Useful Habit</strong>. Ці Умови використання є юридичною угодою між вами (Користувач) та Адміністрацією Сайту і регулюють порядок доступу та використання матеріалів ресурсу.
+            </p>
+            <p>
+              Переглядаючи сторінки Сайту, підписуючись на розсилку або використовуючи будь-які інтерактивні форми, ви автоматично підтверджуєте свою <strong>повну та безумовну згоду</strong> з цими Умовами.
+            </p>
+          </div>
+
+          <!-- Section 1 -->
+          <section class="doc-section" id="section-1" aria-labelledby="s1-title">
+            <h2 id="s1-title">
+              <span class="section-num" aria-hidden="true">1</span>
+              Загальні положення
+            </h2>
+            <ul class="doc-list">
+              <li>
+                Сайт «Useful Habit» є відкритим інформаційно-оглядовим майданчиком, присвяченим велнес-індустрії, аналізу складів дієтичних добавок, здоровому метаболізму та формуванню корисних щоденних звичок.
+              </li>
+              <li>
+                Адміністрація Сайту залишає за собою право в будь-який момент змінювати, додавати або видаляти пункти цих Умов без попереднього особистого сповіщення Користувачів. Зміни набувають чинності з моменту їх публікації на цій сторінці.
+              </li>
+            </ul>
+          </section>
+          <hr class="doc-divider" />
+
+          <!-- Section 2 -->
+          <section class="doc-section" id="section-2" aria-labelledby="s2-title">
+            <h2 id="s2-title">
+              <span class="section-num" aria-hidden="true">2</span>
+              Права інтелектуальної власності
+            </h2>
+            <ul class="doc-list">
+              <li>
+                Всі текстові матеріали, незалежні аналітичні огляди, структура контенту, дизайн, графічні елементи та фірмовий логотип Useful Habit, розміщені на Сайті, є об'єктами інтелектуальної власності та захищені законодавством про авторське право.
+              </li>
+              <li>
+                Копіювання, повне або часткове дублювання контенту, передрук матеріалів на інших веб-ресурсах або їх комерційне використання — суворо заборонені без попередньої письмової згоди Адміністрації Сайту та обов'язкового прямого гіперпосилання на першоджерело.
+              </li>
+            </ul>
+            <div class="doc-ip">
+              <p>
+                © 2026 Useful Habit. Всі права захищено. Використання матеріалів сайту дозволено
+                виключно з письмового дозволу адміністрації та з обов'язковим посиланням на
+                першоджерело.
+              </p>
+            </div>
+          </section>
+          <hr class="doc-divider" />
+
+          <!-- Section 3 -->
+          <section class="doc-section" id="section-3" aria-labelledby="s3-title">
+            <h2 id="s3-title">
+              <span class="section-num" aria-hidden="true">3</span>
+              Правила використання інтерактивних форм та сервісів
+            </h2>
+            <ul class="doc-list">
+              <li>
+                Під час заповнення форм підписки або форм запиту інформації про наявність та вартість продуктів (наприклад, Skineform), Користувач зобов'язується надати коректні та актуальні контактні дані (ім'я, email, номер телефону).
+              </li>
+              <li>
+                Користувачам забороняється використовувати Сайт для розсилання спаму, вчинення дій, спрямованих на порушення стабільності роботи серверів (DDoS-атаки), або намагатися отримати несанкціонований доступ до адміністративної частини сайту.
+              </li>
+            </ul>
+          </section>
+          <hr class="doc-divider" />
+
+          <!-- Section 4 -->
+          <section class="doc-section" id="section-4" aria-labelledby="s4-title">
+            <h2 id="s4-title">
+              <span class="section-num" aria-hidden="true">4</span>
+              Обмеження щодо віку
+            </h2>
+            <div class="age-badge">
+              <span>18+</span>
+              Лише для повнолітніх
+            </div>
+            <p>
+              Матеріали Сайту та дієтичні добавки, які на ньому описуються, орієнтовані на повнолітню аудиторію. Використання Сайту та заповнення будь-яких контактних форм дозволено особам, які досягли <strong>18-річного віку</strong>.
+            </p>
+          </section>
+          <hr class="doc-divider" />
+
+          <!-- Section 5 -->
+          <section class="doc-section" id="section-5" aria-labelledby="s5-title">
+            <h2 id="s5-title">
+              <span class="section-num" aria-hidden="true">5</span>
+              Відсутність комерційних гарантій
+            </h2>
+            <ul class="doc-list">
+              <li>
+                Сайт надає інформаційні послуги «як є» (as is). Ми не даємо жодних комерційних або юридичних гарантій щодо того, що інформація про продукти повністю задовольнить ваші особисті очікування, або що робота сторонніх серверів дистриб'юторів буде безперебійною.
+              </li>
+              <li>
+                Всі технічні характеристики та ціни дієтичних добавок, вказані на Сайті, мають ознайомчий характер та базуються на даних, відкритих виробниками на момент створення оглядів.
+              </li>
+            </ul>
+            <div class="doc-highlight">
+              <p>
+                <strong>Зверніть увагу:</strong> актуальну вартість та наявність продукту завжди уточнюйте
+                безпосередньо у офіційного дистриб'ютора на момент оформлення замовлення.
+              </p>
+            </div>
+          </section>
+          <hr class="doc-divider" />
+
+          <!-- Section 6 -->
+          <section class="doc-section" id="section-6" aria-labelledby="s6-title">
+            <h2 id="s6-title">
+              <span class="section-num" aria-hidden="true">6</span>
+              Заключні положення
+            </h2>
+            <p>
+              Ці Умови разом із Політикою конфіденційності та Відмовою від відповідальності складають повну угоду між Користувачем та Сайтом. Якщо будь-яке положення цих Умов буде визнано судом недійсним, інші пункти залишаються в повній юридичній силі.
+            </p>
+
+            <!-- Legal suite links -->
+            <div class="doc-legal-suite">
+              <h3>Правовий пакет сайту</h3>
+              <p>Ці Умови є частиною трьох взаємопов'язаних правових документів порталу Useful Habit:</p>
+              <div class="doc-legal-links">
+                <a href="/privacy/">
+                  🔒 Політика конфіденційності
+                </a>
+                <a href="/disclaimer/">
+                  ⚖️ Відмова від відповідальності
+                </a>
+                <a href="/terms/" aria-current="page">
+                  📄 Умови використання
+                </a>
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+        <!-- Sidebar TOC -->
+        <aside class="doc-toc" aria-label="Зміст документа">
+          <h2 class="doc-toc-title">ЗМІСТ</h2>
+          <ul class="toc-list" id="toc-list">
+            <li><a href="#section-1">1. Загальні положення</a></li>
+            <li><a href="#section-2">2. Інтелектуальна власність</a></li>
+            <li><a href="#section-3">3. Інтерактивні форми</a></li>
+            <li><a href="#section-4">4. Обмеження щодо віку</a></li>
+            <li><a href="#section-5">5. Комерційні гарантії</a></li>
+            <li><a href="#section-6">6. Заключні положення</a></li>
+          </ul>
+
+          <!-- Related legal docs -->
+          <div class="toc-related">
+            <p class="toc-related-title">ПРАВОВИЙ ПАКЕТ</p>
+            <ul>
+              <li><a href="/privacy/">Конфіденційність</a></li>
+              <li><a href="/disclaimer/">Дисклеймер</a></li>
+              <!-- LINK: контакти -->
+              <li><a href="/contacts/">Контакти</a></li>
+            </ul>
+          </div>
+
+          <div class="toc-updated">
+            <strong style="color: var(--clr-forest); font-size:0.78rem;">Остання редакція</strong><br />
+            06 листопада 2026 р.
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Підвал сайту">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo-link" aria-label="На головну">
+            <span class="footer-logo-text"><strong>Useful</strong> Habit</span>
+          </a>
+          <p>Незалежний інформаційний велнес-портал про дієтичні добавки та нутрицевтики. Науковий підхід, нульова комерційна упередженість.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Розділи</h4>
+          <ul>
+            <li><a href="/active-life/">Активне життя</a></li>
+            <li><a href="/metabolism/">Тонус та обмін речовин</a></li>
+            <li><a href="/beauty/">Краса та молодість</a></li>
+            <li><a href="/about/">Про нас</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Правова інформація</h4>
+          <ul>
+            <li><a href="/privacy/">Політика конфіденційності</a></li>
+            <li><a href="/disclaimer/">Відмова від відповідальності</a></li>
+            <li><a href="/terms/" aria-current="page">Умови використання</a></li>
+            <li><a href="/contacts/">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer" role="note">
+        <h5>ПРАВОВИЙ ДИСКЛЕЙМЕР</h5>
+        <p>
+          Вся інформація, розміщена на сайті usefulhabit.com, має виключно інформаційно-освітній характер і не є медичною
+          консультацією, діагнозом або рекомендацією до лікування. Useful Habit не є медичним закладом. Перед застосуванням
+          будь-яких дієтичних добавок необхідно проконсультуватися з лікарем. Результати застосування описаних продуктів
+          є індивідуальними і можуть відрізнятися.
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Useful Habit. Всі права захищено.</p>
+        <nav class="footer-links" aria-label="Допоміжні посилання">
+          <a href="/privacy/">Конфіденційність</a>
+          <a href="/disclaimer/">Дисклеймер</a>
+          <a href="/terms/" aria-current="page">Умови</a>
+          <a href="/contacts/">Контакти</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Header scroll shadow
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // Mobile burger
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    burger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Active TOC highlight on scroll
+    const sections = document.querySelectorAll('.doc-section');
+    const tocLinks = document.querySelectorAll('.toc-list a');
+
+    const tocObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => link.classList.remove('active'));
+          const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+    sections.forEach(s => tocObserver.observe(s));
+  </script>
+
+</body>
+</html>
