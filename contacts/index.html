@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Контакти — Useful Habit</title>
+  <meta name="description" content="Зв'яжіться з редакцією порталу Useful Habit: форма зворотного зв'язку, електронна пошта та графік роботи служби підтримки." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://usefulhabit.com/contacts/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://usefulhabit.com/contacts/" />
+  <meta property="og:title" content="Контакти — Useful Habit" />
+  <meta property="og:description" content="Зв'яжіться з редакцією порталу Useful Habit. Відповідаємо протягом 24–48 годин у робочі дні." />
+  <meta property="og:image" content="https://usefulhabit.com/og-image.jpg" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:site_name" content="Useful Habit" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://usefulhabit.com/#organization",
+        "name": "Useful Habit",
+        "url": "https://usefulhabit.com/",
+        "email": "useful.habit@outlook.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "useful.habit@outlook.com",
+          "availableLanguage": ["Ukrainian"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        }
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://usefulhabit.com/contacts/#webpage",
+        "url": "https://usefulhabit.com/contacts/",
+        "name": "Контакти — Useful Habit",
+        "isPartOf": {"@id": "https://usefulhabit.com/#website"},
+        "publisher": {"@id": "https://usefulhabit.com/#organization"},
+        "inLanguage": "uk",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://usefulhabit.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Контакти", "item": "https://usefulhabit.com/contacts/"}
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --clr-forest:    #0A2E1E;
+      --clr-deep:      #0D3D28;
+      --clr-mid:       #1A6B44;
+      --clr-fresh:     #2DBE6C;
+      --clr-light:     #A8DFC0;
+      --clr-bg:        #F7F9F5;
+      --clr-surface:   #EEF4EA;
+      --clr-border:    #D6E8D0;
+      --clr-text:      #1E1E1E;
+      --clr-muted:     #5A6B62;
+      --clr-white:     #FFFFFF;
+
+      --ff-display:    'DM Serif Display', Georgia, serif;
+      --ff-body:       'Inter', system-ui, sans-serif;
+
+      --radius-sm:     6px;
+      --radius-md:     12px;
+      --radius-lg:     20px;
+      --radius-xl:     28px;
+
+      --shadow-card:   0 2px 20px rgba(10, 46, 30, 0.08);
+      --shadow-hover:  0 8px 40px rgba(10, 46, 30, 0.14);
+      --transition:    0.28s cubic-bezier(0.4, 0, 0.2, 1);
+      --max-w:         1180px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--ff-body);
+      background-color: var(--clr-bg);
+      color: var(--clr-text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    /* =============================================
+       HEADER
+       ============================================= */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(247, 249, 245, 0.82);
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+      border-bottom: 1px solid rgba(166, 215, 185, 0.4);
+      transition: box-shadow var(--transition);
+    }
+    .site-header.scrolled { box-shadow: 0 2px 24px rgba(10, 46, 30, 0.1); }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 2rem;
+    }
+
+    .logo-link { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+    .logo-img { height: 40px; width: auto; }
+    .logo-text { font-family: var(--ff-body); font-weight: 600; font-size: 1.1rem; color: var(--clr-forest); }
+    .logo-text strong { color: var(--clr-mid); }
+
+    .main-nav { display: flex; align-items: center; gap: 0.25rem; }
+    .main-nav a {
+      font-size: 0.875rem; font-weight: 500; color: var(--clr-forest);
+      padding: 0.4rem 0.8rem; border-radius: var(--radius-sm);
+      transition: background var(--transition), color var(--transition);
+      white-space: nowrap;
+    }
+    .main-nav a:hover { background: var(--clr-surface); color: var(--clr-mid); }
+    .nav-cta { background: var(--clr-forest) !important; color: var(--clr-white) !important; padding: 0.45rem 1rem !important; }
+    .nav-cta:hover { background: var(--clr-mid) !important; color: var(--clr-white) !important; }
+
+    .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+    .burger span { display: block; width: 24px; height: 2px; background: var(--clr-forest); border-radius: 2px; transition: var(--transition); }
+
+    .mobile-menu { display: none; flex-direction: column; background: var(--clr-bg); border-top: 1px solid var(--clr-border); padding: 1rem 0 1.5rem; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 0.95rem; font-weight: 500; color: var(--clr-forest); padding: 0.7rem 1.5rem; border-radius: var(--radius-sm); transition: background var(--transition); }
+    .mobile-menu a:hover { background: var(--clr-surface); }
+
+    @media (max-width: 860px) { .main-nav { display: none; } .burger { display: flex; } }
+
+    /* =============================================
+       PAGE HERO
+       ============================================= */
+    .page-hero {
+      padding-top: calc(68px + clamp(3rem, 6vw, 5rem));
+      padding-bottom: clamp(2.5rem, 5vw, 4rem);
+      background: var(--clr-forest);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 70% at 85% 50%, rgba(45, 190, 108, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 35% 60% at 10% 80%, rgba(26, 107, 68, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .breadcrumb {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 0.8rem; margin-bottom: 1.4rem; flex-wrap: wrap;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.55); transition: color var(--transition); }
+    .breadcrumb a:hover { color: var(--clr-white); }
+    .breadcrumb span:last-child { color: rgba(255,255,255,0.75); }
+    .breadcrumb-sep { color: rgba(255,255,255,0.3); font-size: 0.75rem; }
+
+    .page-hero-label {
+      display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      color: var(--clr-fresh); background: rgba(45, 190, 108, 0.12);
+      border: 1px solid rgba(45, 190, 108, 0.3); padding: 0.25rem 0.75rem;
+      border-radius: 100px; margin-bottom: 1rem;
+    }
+
+    .page-hero h1 {
+      font-family: var(--ff-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--clr-white);
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+
+    .page-hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,0.7);
+      max-width: 52ch; line-height: 1.7;
+    }
+
+    /* =============================================
+       MAIN CONTENT GRID
+       ============================================= */
+    .contacts-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: clamp(2rem, 4vw, 3.5rem);
+      align-items: start;
+      padding-block: clamp(3rem, 6vw, 5rem);
+    }
+
+    @media (max-width: 900px) {
+      .contacts-layout { grid-template-columns: 1fr; }
+    }
+
+    /* =============================================
+       CONTACT FORM
+       ============================================= */
+    .form-card {
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-xl);
+      padding: clamp(1.8rem, 4vw, 2.8rem);
+      box-shadow: var(--shadow-card);
+    }
+
+    .form-card-header { margin-bottom: 2rem; }
+
+    .form-card-header h2 {
+      font-family: var(--ff-display);
+      font-size: 1.6rem;
+      color: var(--clr-forest);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-card-header p { font-size: 0.9rem; color: var(--clr-muted); line-height: 1.6; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group.full { grid-column: 1 / -1; }
+
+    .form-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--clr-forest);
+      letter-spacing: 0.02em;
+    }
+
+    .form-label span { color: var(--clr-fresh); margin-left: 1px; }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      font-family: var(--ff-body);
+      font-size: 0.9rem;
+      border: 1.5px solid var(--clr-border);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      background: var(--clr-bg);
+      color: var(--clr-text);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+      width: 100%;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: #9FB0A6; }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--clr-mid);
+      background: var(--clr-white);
+      box-shadow: 0 0 0 3px rgba(45, 190, 108, 0.14);
+    }
+
+    .form-textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
+
+    .form-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235A6B62' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+
+    .form-consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.8rem;
+      color: var(--clr-muted);
+      line-height: 1.55;
+    }
+
+    .form-consent input[type="checkbox"] {
+      width: 16px; height: 16px;
+      border: 1.5px solid var(--clr-border);
+      border-radius: 4px;
+      accent-color: var(--clr-mid);
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .form-consent a { color: var(--clr-mid); text-decoration: underline; text-underline-offset: 2px; }
+    .form-consent a:hover { color: var(--clr-forest); }
+
+    .form-submit {
+      font-family: var(--ff-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: var(--clr-forest);
+      color: var(--clr-white);
+      border: none;
+      border-radius: var(--radius-md);
+      padding: 0.9rem 2rem;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .form-submit:hover {
+      background: var(--clr-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(10, 46, 30, 0.22);
+    }
+
+    .form-submit:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .form-success-icon {
+      width: 56px; height: 56px;
+      background: rgba(45, 190, 108, 0.12);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 1rem;
+    }
+
+    .form-success h3 {
+      font-family: var(--ff-display);
+      font-size: 1.3rem;
+      color: var(--clr-forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success p { font-size: 0.9rem; color: var(--clr-muted); }
+
+    @media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
+
+    /* =============================================
+       SIDEBAR INFO CARDS
+       ============================================= */
+    .info-stack { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .info-card {
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem;
+      transition: box-shadow var(--transition);
+    }
+
+    .info-card:hover { box-shadow: var(--shadow-card); }
+
+    .info-card-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-card-icon.green { background: rgba(45, 190, 108, 0.12); }
+    .info-card-icon.forest { background: rgba(10, 46, 30, 0.08); }
+    .info-card-icon.teal { background: rgba(26, 107, 68, 0.1); }
+
+    .info-card h3 {
+      font-family: var(--ff-display);
+      font-size: 1rem;
+      color: var(--clr-forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card p { font-size: 0.875rem; color: var(--clr-muted); line-height: 1.65; }
+
+    /* Email link */
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--clr-mid);
+      border-bottom: 1px dashed var(--clr-light);
+      padding-bottom: 1px;
+      transition: color var(--transition), border-color var(--transition);
+      margin-top: 0.5rem;
+    }
+    .email-link:hover { color: var(--clr-forest); border-color: var(--clr-mid); }
+
+    /* Schedule table */
+    .schedule-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.6rem; }
+
+    .schedule-item {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.85rem; gap: 0.5rem;
+    }
+
+    .schedule-day { color: var(--clr-muted); }
+
+    .schedule-time {
+      font-weight: 600; font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+    }
+
+    .schedule-time.open { background: rgba(45, 190, 108, 0.12); color: var(--clr-mid); }
+    .schedule-time.closed { background: rgba(90, 107, 98, 0.1); color: var(--clr-muted); }
+
+    /* Response time indicator */
+    .response-bar {
+      margin-top: 0.8rem;
+      background: var(--clr-surface);
+      border-radius: 100px;
+      height: 6px;
+      overflow: hidden;
+    }
+
+    .response-bar-fill {
+      height: 100%;
+      width: 70%;
+      background: linear-gradient(90deg, var(--clr-mid), var(--clr-fresh));
+      border-radius: 100px;
+    }
+
+    .response-note { font-size: 0.75rem; color: var(--clr-muted); margin-top: 0.4rem; }
+
+    /* Trust / legal notice card */
+    .trust-card {
+      background: var(--clr-forest);
+      color: var(--clr-white);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem;
+    }
+
+    .trust-card-eyebrow {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em;
+      color: var(--clr-fresh); margin-bottom: 0.6rem;
+    }
+
+    .trust-card h3 {
+      font-family: var(--ff-display);
+      font-size: 1rem;
+      color: var(--clr-white);
+      margin-bottom: 0.65rem;
+    }
+
+    .trust-card p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+    .site-footer {
+      background: var(--clr-forest);
+      color: rgba(255,255,255,0.75);
+      padding-block: clamp(3rem, 6vw, 5rem);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-brand p { font-size: 0.875rem; line-height: 1.7; max-width: 36ch; margin-top: 1rem; }
+
+    .footer-logo-text { font-family: var(--ff-body); font-weight: 600; font-size: 1.1rem; color: var(--clr-white); }
+    .footer-logo-text strong { color: var(--clr-fresh); }
+
+    .footer-col h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; color: var(--clr-fresh); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul a { font-size: 0.875rem; color: rgba(255,255,255,0.65); transition: color var(--transition); }
+    .footer-col ul a:hover { color: var(--clr-white); }
+
+    .footer-disclaimer {
+      margin-block: 2.5rem; padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.04);
+    }
+    .footer-disclaimer h5 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; color: var(--clr-light); margin-bottom: 0.6rem; }
+    .footer-disclaimer p { font-size: 0.75rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
+
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
+    .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.45); transition: color var(--transition); }
+    .footer-links a:hover { color: var(--clr-white); }
+
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo-link" aria-label="Useful Habit — на головну">
+          <img src="logo.png" alt="Useful Habit" class="logo-img" id="logo-img"
+               onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'" />
+          <span class="logo-text" id="logo-fallback" style="display:none"><strong>Useful</strong> Habit</span>
+        </a>
+        <nav class="main-nav" aria-label="Головне меню">
+          <a href="/">Головна</a>
+          <a href="/active-life/">Активне життя</a>
+          <a href="/metabolism/">Тонус та обмін речовин</a>
+          <a href="/beauty/">Краса та молодість</a>
+          <a href="/about/" class="nav-cta">Про нас</a>
+        </nav>
+        <button class="burger" aria-label="Відкрити меню" aria-expanded="false" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <a href="/">Головна</a>
+        <a href="/active-life/">Активне життя</a>
+        <a href="/metabolism/">Тонус та обмін речовин</a>
+        <a href="/beauty/">Краса та молодість</a>
+        <a href="/about/">Про нас</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- PAGE HERO — dark green for contact pages (more inviting) -->
+    <div class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Шлях навігації">
+          <a href="/">Головна</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Контакти</span>
+        </nav>
+        <span class="page-hero-label">Служба підтримки</span>
+        <h1>Зв'яжіться з нами</h1>
+        <p class="page-hero-sub">
+          Ми завжди відкриті до спілкування, запитань та пропозицій.
+          Відповідаємо протягом 24–48 годин у робочі дні.
+        </p>
+      </div>
+    </div>
+
+    <!-- CONTACTS LAYOUT -->
+    <div class="container">
+      <div class="contacts-layout">
+
+        <!-- LEFT: Contact Form -->
+        <div class="form-card">
+          <div class="form-card-header">
+            <h2>Написати нам повідомлення</h2>
+            <p>Зауваження до оглядів, пропозиції щодо співпраці, питання конфіденційності — будь-які теми.</p>
+          </div>
+
+          <!-- Form itself -->
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label class="form-label" for="cf-name">
+                  Ваше ім'я <span>*</span>
+                </label>
+                <input
+                  type="text"
+                  id="cf-name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Наприклад: Оксана"
+                  autocomplete="given-name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-email">
+                  Email <span>*</span>
+                </label>
+                <input
+                  type="email"
+                  id="cf-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="ваш@email.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <div class="form-group full">
+                <label class="form-label" for="cf-subject">
+                  Тема звернення <span>*</span>
+                </label>
+                <select id="cf-subject" name="subject" class="form-select" required>
+                  <option value="" disabled selected>Оберіть тему…</option>
+                  <option value="review">Запитання щодо огляду</option>
+                  <option value="brand">Представник бренду / оновлення даних</option>
+                  <option value="cooperation">Пропозиція щодо співпраці</option>
+                  <option value="privacy">Питання конфіденційності</option>
+                  <option value="technical">Технічна проблема</option>
+                  <option value="other">Інше</option>
+                </select>
+              </div>
+
+              <div class="form-group full">
+                <label class="form-label" for="cf-message">
+                  Текст повідомлення <span>*</span>
+                </label>
+                <textarea
+                  id="cf-message"
+                  name="message"
+                  class="form-textarea"
+                  placeholder="Опишіть ваше запитання або пропозицію…"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group full">
+                <label class="form-consent">
+                  <input type="checkbox" id="cf-consent" name="consent" required />
+                  <span>
+                    Натискаючи «Надіслати», я погоджуюсь з обробкою моїх даних відповідно до
+                    <a href="/privacy/">Політики конфіденційності</a> сайту Useful Habit.
+                  </span>
+                </label>
+              </div>
+
+              <div class="form-group full">
+                <button type="submit" class="form-submit" id="submit-btn">
+                  Надіслати повідомлення
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+          <!-- Success message (shown after submit) -->
+          <div class="form-success" id="form-success">
+            <div class="form-success-icon">✅</div>
+            <h3>Повідомлення надіслано!</h3>
+            <p>Дякуємо за звернення. Ми відповімо вам протягом 24–48 робочих годин на вказану адресу email.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Info sidebar -->
+        <aside class="info-stack" aria-label="Контактна інформація">
+
+          <!-- Email card -->
+          <div class="info-card">
+            <div class="info-card-icon green">📩</div>
+            <h3>Електронна пошта</h3>
+            <p>З будь-яких питань: технічна підтримка, зауваження до контенту, питання конфіденційності.</p>
+            <a href="mailto:useful.habit@outlook.com" class="email-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              useful.habit@outlook.com
+            </a>
+          </div>
+
+          <!-- Schedule card -->
+          <div class="info-card">
+            <div class="info-card-icon teal">⏰</div>
+            <h3>Графік роботи</h3>
+            <ul class="schedule-list">
+              <li class="schedule-item">
+                <span class="schedule-day">Пн — Пт</span>
+                <span class="schedule-time open">09:00 – 18:00</span>
+              </li>
+              <li class="schedule-item">
+                <span class="schedule-day">Субота</span>
+                <span class="schedule-time closed">Вихідний</span>
+              </li>
+              <li class="schedule-item">
+                <span class="schedule-day">Неділя</span>
+                <span class="schedule-time closed">Вихідний</span>
+              </li>
+            </ul>
+            <div class="response-bar" aria-hidden="true">
+              <div class="response-bar-fill"></div>
+            </div>
+            <p class="response-note">
+              Запити у вихідні обробляються в понеділок у порядку черги.
+              Зазвичай відповідаємо протягом 24–48 год.
+            </p>
+          </div>
+
+          <!-- Trust / legal notice -->
+          <div class="trust-card" role="note">
+            <p class="trust-card-eyebrow">ВАЖЛИВА ПРИМІТКА</p>
+            <h3>Ми не надаємо медичних консультацій</h3>
+            <p>
+              Useful Habit діє виключно як незалежне оглядове цифрове видання. Наша служба підтримки
+              не встановлює діагнозів та не виписує рецептів.
+            </p>
+            <p style="margin-top:0.65rem;">
+              Якщо ваше запитання стосується самопочуття, дозування або сумісності добавок із
+              вашими поточними ліками — будь ласка, зверніться до вашого сімейного або
+              профільного лікаря.
+            </p>
+          </div>
+
+          <!-- Legal links quick nav -->
+          <div class="info-card" style="padding: 1.2rem 1.6rem;">
+            <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.05em; color:var(--clr-mid); margin-bottom:0.75rem;">ПРАВОВА ДОКУМЕНТАЦІЯ</p>
+            <div style="display:flex; flex-direction:column; gap:0.4rem;">
+              <a href="/privacy/" style="font-size:0.85rem; color:var(--clr-mid); display:flex; align-items:center; gap:0.4rem; padding:0.35rem 0.5rem; border-radius:var(--radius-sm); transition:background var(--transition);"
+                 onmouseover="this.style.background='var(--clr-surface)'" onmouseout="this.style.background='transparent'">
+                🔒 Політика конфіденційності
+              </a>
+              <a href="/disclaimer/" style="font-size:0.85rem; color:var(--clr-mid); display:flex; align-items:center; gap:0.4rem; padding:0.35rem 0.5rem; border-radius:var(--radius-sm); transition:background var(--transition);"
+                 onmouseover="this.style.background='var(--clr-surface)'" onmouseout="this.style.background='transparent'">
+                ⚖️ Відмова від відповідальності
+              </a>
+              <a href="/terms/" style="font-size:0.85rem; color:var(--clr-mid); display:flex; align-items:center; gap:0.4rem; padding:0.35rem 0.5rem; border-radius:var(--radius-sm); transition:background var(--transition);"
+                 onmouseover="this.style.background='var(--clr-surface)'" onmouseout="this.style.background='transparent'">
+                📄 Умови використання
+              </a>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Підвал сайту">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo-link" aria-label="На головну">
+            <span class="footer-logo-text"><strong>Useful</strong> Habit</span>
+          </a>
+          <p>Незалежний інформаційний велнес-портал про дієтичні добавки та нутрицевтики. Науковий підхід, нульова комерційна упередженість.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Розділи</h4>
+          <ul>
+            <li><a href="/active-life/">Активне життя</a></li>
+            <li><a href="/metabolism/">Тонус та обмін речовин</a></li>
+            <li><a href="/beauty/">Краса та молодість</a></li>
+            <li><a href="/about/">Про нас</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Правова інформація</h4>
+          <ul>
+            <li><a href="/privacy/">Політика конфіденційності</a></li>
+            <li><a href="/disclaimer/">Відмова від відповідальності</a></li>
+            <li><a href="/terms/">Умови використання</a></li>
+            <li><a href="/contacts/" aria-current="page">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer" role="note">
+        <h5>ПРАВОВИЙ ДИСКЛЕЙМЕР</h5>
+        <p>
+          Вся інформація, розміщена на сайті usefulhabit.com, має виключно інформаційно-освітній характер і не є медичною
+          консультацією, діагнозом або рекомендацією до лікування. Useful Habit не є медичним закладом. Перед застосуванням
+          будь-яких дієтичних добавок необхідно проконсультуватися з лікарем. Результати застосування описаних продуктів
+          є індивідуальними і можуть відрізнятися.
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Useful Habit. Всі права захищено.</p>
+        <nav class="footer-links" aria-label="Допоміжні посилання">
+          <a href="/privacy/">Конфіденційність</a>
+          <a href="/disclaimer/">Дисклеймер</a>
+          <a href="/terms/">Умови</a>
+          <a href="/contacts/" aria-current="page">Контакти</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Header scroll shadow
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // Mobile burger
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    burger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ——— Contact form handler ———
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successBlock = document.getElementById('form-success');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const name = form.querySelector('#cf-name').value.trim();
+      const email = form.querySelector('#cf-email').value.trim();
+      const subject = form.querySelector('#cf-subject').value;
+      const message = form.querySelector('#cf-message').value.trim();
+      const consent = form.querySelector('#cf-consent').checked;
+
+      if (!name || !email || !subject || !message || !consent) {
+        // Highlight empty required fields
+        [form.querySelector('#cf-name'), form.querySelector('#cf-email'),
+         form.querySelector('#cf-subject'), form.querySelector('#cf-message')].forEach(field => {
+          if (!field.value.trim()) {
+            field.style.borderColor = '#E8A83A';
+            field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true });
+          }
+        });
+        if (!consent) {
+          form.querySelector('#cf-consent').style.outline = '2px solid #E8A83A';
+          form.querySelector('#cf-consent').addEventListener('change', function() {
+            this.style.outline = '';
+          }, { once: true });
+        }
+        return;
+      }
+
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 0.8s linear infinite"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" opacity=".3"/><path d="M21 12a9 9 0 00-9-9"/></svg>
+        Надсилаємо…
+      `;
+
+      // TODO: replace with real form backend (Formspree, EmailJS, Netlify Forms, etc.)
+      // Example Formspree: fetch('https://formspree.io/f/YOUR_FORM_ID', { method:'POST', ... })
+      setTimeout(() => {
+        form.style.display = 'none';
+        successBlock.style.display = 'block';
+      }, 900);
+    });
+  </script>
+
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+
+</body>
+</html>
