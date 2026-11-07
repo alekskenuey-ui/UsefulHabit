@@ -1,0 +1,88 @@
+/* Єдина шапка Useful Habit (frosted glass). Така сама, як на головній.
+   Підключається на сторінках, що не мають власних стилів шапки (напр. /products/skineform/). */
+:root {
+  --clr-forest: #0A2E1E;
+  --clr-mid:    #1A6B44;
+  --clr-bg:     #F7F9F5;
+  --clr-surface:#EEF4EA;
+  --clr-border: #D6E8D0;
+  --clr-white:  #FFFFFF;
+  --radius-sm:  6px;
+  --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-w:      1180px;
+}
+
+body.has-fixed-header { padding-top: 68px; }
+
+.site-header .container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(247, 249, 245, 0.82);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid rgba(166, 215, 185, 0.4);
+  transition: box-shadow var(--transition);
+}
+.site-header.scrolled { box-shadow: 0 2px 24px rgba(10, 46, 30, 0.1); }
+
+.site-header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 2rem;
+}
+
+.site-header .logo-link { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+.site-header .logo-img { height: 52px; width: auto; }
+.site-header .logo-text { font-weight: 600; font-size: 1.1rem; color: var(--clr-forest); display: none; }
+.site-header .logo-text strong { color: var(--clr-mid); }
+
+.site-header .main-nav { display: flex; align-items: center; gap: 0.25rem; }
+.site-header .main-nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--clr-forest);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+.site-header .main-nav a:hover { background: var(--clr-surface); color: var(--clr-mid); }
+
+.site-header .nav-cta { background: var(--clr-forest) !important; color: var(--clr-white) !important; padding: 0.45rem 1rem !important; }
+.site-header .nav-cta:hover { background: var(--clr-mid) !important; color: var(--clr-white) !important; }
+
+.site-header .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+.site-header .burger span { display: block; width: 24px; height: 2px; background: var(--clr-forest); border-radius: 2px; transition: var(--transition); }
+
+.site-header .mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--clr-bg);
+  border-top: 1px solid var(--clr-border);
+  padding: 1rem 0 1.5rem;
+}
+.site-header .mobile-menu.open { display: flex; }
+.site-header .mobile-menu a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--clr-forest);
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+.site-header .mobile-menu a:hover { background: var(--clr-surface); }
+
+@media (max-width: 860px) {
+  .site-header .main-nav { display: none; }
+  .site-header .burger { display: flex; }
+}

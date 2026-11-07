@@ -89,36 +89,40 @@
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
+  <link rel="stylesheet" href="../../assets/site-header.css" />
 </head>
 
-<body class="font-sans text-slate-700 antialiased">
+<body class="has-fixed-header font-sans text-slate-700 antialiased">
 
   <!-- ============ HEADER ============ -->
-  <header class="sticky top-0 z-40 glass border-b border-emerald-100">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-      <a href="../../" class="flex shrink-0 items-center" aria-label="Useful Habit — на головну">
-        <img src="../../assets/logo.png" alt="Useful Habit" class="h-9 w-auto sm:h-10" width="120" height="40" />
-      </a>
-
-      <nav class="hidden items-center gap-6 text-sm font-medium text-forest-800 lg:flex" aria-label="Головне меню">
-        <a href="../../" class="hover:text-emerald-600">Головна</a>
-        <a href="../../active-life/" class="hover:text-emerald-600">Активне життя</a>
-        <a href="../../metabolism/" class="hover:text-emerald-600">Тонус та Обмін речовин</a>
-        <a href="../../beauty/" class="hover:text-emerald-600">Краса та Молодість</a>
-        <a href="../../about/" class="hover:text-emerald-600">Про нас</a>
-      </nav>
-
-      <p class="hidden items-center gap-2 text-xs font-semibold text-emerald-700 sm:flex">
-        <span class="text-emerald-500" aria-hidden="true">●</span> Огляд Useful Habit 2026
-      </p>
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../../" class="logo-link" aria-label="Useful Habit — на головну">
+          <img src="../../logo.png" alt="Useful Habit" class="logo-img" id="logo-img"
+               onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'" />
+          <span class="logo-text" id="logo-fallback" style="display:none"><strong>Useful</strong> Habit</span>
+        </a>
+        <nav class="main-nav" aria-label="Головне меню">
+          <a href="../../">Головна</a>
+          <a href="../../active-life/">Активне життя</a>
+          <a href="../../metabolism/">Тонус та обмін речовин</a>
+          <a href="../../beauty/">Краса та молодість</a>
+          <a href="../../about/" class="nav-cta">Про нас</a>
+        </nav>
+        <button class="burger" aria-label="Відкрити меню" aria-expanded="false" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    <!-- мобільне меню: горизонтальна прокрутка без JS -->
-    <nav class="flex gap-5 overflow-x-auto whitespace-nowrap border-t border-emerald-100 px-4 py-2 text-sm font-medium text-forest-800 lg:hidden" aria-label="Меню (мобільне)">
-      <a href="../../">Головна</a>
-      <a href="../../active-life/">Активне життя</a>
-      <a href="../../metabolism/">Тонус та Обмін речовин</a>
-      <a href="../../beauty/">Краса та Молодість</a>
-      <a href="../../about/">Про нас</a>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільне меню">
+      <div class="container">
+        <a href="../../">Головна</a>
+        <a href="../../active-life/">Активне життя</a>
+        <a href="../../metabolism/">Тонус та обмін речовин</a>
+        <a href="../../beauty/">Краса та молодість</a>
+        <a href="../../about/">Про нас</a>
+      </div>
     </nav>
   </header>
 
@@ -492,5 +496,6 @@
       });
     })();
   </script>
+  <script src="../../assets/site-header.js" defer></script>
 </body>
 </html>

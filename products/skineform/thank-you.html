@@ -34,17 +34,40 @@
     .pop { animation: pop .6s ease-out both; }
     @media (prefers-reduced-motion: reduce) { .pop { animation: none; } }
   </style>
+  <link rel="stylesheet" href="../../assets/site-header.css" />
 </head>
 
-<body class="flex min-h-screen flex-col font-sans text-slate-700 antialiased">
+<body class="has-fixed-header flex min-h-screen flex-col font-sans text-slate-700 antialiased">
 
-  <header class="glass border-b border-emerald-100">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-      <a href="../../" aria-label="Useful Habit — на головну">
-        <img src="../../assets/logo.png" alt="Useful Habit" class="h-9 w-auto sm:h-10" width="120" height="40" />
-      </a>
-      <p class="text-xs font-semibold text-emerald-700"><span class="text-emerald-500" aria-hidden="true">●</span> Useful Habit 2026</p>
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../../" class="logo-link" aria-label="Useful Habit — на головну">
+          <img src="../../logo.png" alt="Useful Habit" class="logo-img" id="logo-img"
+               onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'" />
+          <span class="logo-text" id="logo-fallback" style="display:none"><strong>Useful</strong> Habit</span>
+        </a>
+        <nav class="main-nav" aria-label="Головне меню">
+          <a href="../../">Головна</a>
+          <a href="../../active-life/">Активне життя</a>
+          <a href="../../metabolism/">Тонус та обмін речовин</a>
+          <a href="../../beauty/">Краса та молодість</a>
+          <a href="../../about/" class="nav-cta">Про нас</a>
+        </nav>
+        <button class="burger" aria-label="Відкрити меню" aria-expanded="false" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільне меню">
+      <div class="container">
+        <a href="../../">Головна</a>
+        <a href="../../active-life/">Активне життя</a>
+        <a href="../../metabolism/">Тонус та обмін речовин</a>
+        <a href="../../beauty/">Краса та молодість</a>
+        <a href="../../about/">Про нас</a>
+      </div>
+    </nav>
   </header>
 
   <main class="flex flex-1 items-center justify-center px-4 py-12 sm:px-6">
@@ -86,5 +109,6 @@
       <p class="mt-4 text-xs text-white/35">© 2026 Useful Habit. Всі права захищено.</p>
     </div>
   </footer>
+  <script src="../../assets/site-header.js" defer></script>
 </body>
 </html>
