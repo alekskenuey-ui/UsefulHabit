@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Дякуємо! Заявку прийнято | Useful Habit</title>
+  <meta name="description" content="Вашу заявку успішно прийнято. Менеджер зв'яжеться з вами протягом 10-15 хвилин." />
+  <!-- Сторінка подяки не потрібна в пошуку -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#ecf7ef" />
+  <link rel="icon" href="../../assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], serif: ['Lora', 'Georgia', 'serif'] },
+          colors: {
+            mint: { 50: '#f4faf6', 100: '#ecf7ef', 200: '#d6eedd' },
+            forest: { 700: '#1f5a3d', 800: '#164a31', 900: '#0f3624' }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { background-color: #f4faf6; background-image: url("../../assets/bg-icons.svg"); background-size: 720px 720px; }
+    @media (max-width: 640px) { body { background-size: 520px 520px; } }
+    .glass { background: rgba(255,255,255,.72); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+    @keyframes pop { 0% { transform: scale(.6); opacity: 0; } 70% { transform: scale(1.08); } 100% { transform: scale(1); opacity: 1; } }
+    .pop { animation: pop .6s ease-out both; }
+    @media (prefers-reduced-motion: reduce) { .pop { animation: none; } }
+  </style>
+</head>
+
+<body class="flex min-h-screen flex-col font-sans text-slate-700 antialiased">
+
+  <header class="glass border-b border-emerald-100">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+      <a href="../../" aria-label="Useful Habit — на головну">
+        <img src="../../assets/logo.png" alt="Useful Habit" class="h-9 w-auto sm:h-10" width="120" height="40" />
+      </a>
+      <p class="text-xs font-semibold text-emerald-700"><span class="text-emerald-500" aria-hidden="true">●</span> Useful Habit 2026</p>
+    </div>
+  </header>
+
+  <main class="flex flex-1 items-center justify-center px-4 py-12 sm:px-6">
+    <section class="w-full max-w-xl rounded-[28px] border-[3px] border-emerald-500 bg-white/95 p-8 text-center shadow-2xl shadow-emerald-900/20 ring-8 ring-emerald-200/60 sm:p-12" aria-labelledby="ty-title">
+      <div class="pop mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 shadow-lg shadow-emerald-600/30" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </div>
+
+      <h1 id="ty-title" class="mt-7 font-serif text-3xl font-bold text-forest-900 sm:text-4xl">Дякуємо!</h1>
+      <p class="mt-4 text-lg font-semibold leading-snug text-forest-800">Вашу заявку успішно прийнято.</p>
+      <p class="mt-2 text-base leading-relaxed text-slate-600">Менеджер зв'яжеться з вами протягом 10-15 хвилин.</p>
+
+      <div class="mt-8 rounded-2xl bg-mint-100 px-5 py-4 text-left text-sm leading-relaxed text-slate-600">
+        <p class="font-semibold text-forest-800">Щоб менеджер зміг швидко до вас додзвонитися:</p>
+        <ul class="mt-2 list-disc space-y-1 pl-5">
+          <li>тримайте телефон поруч і з увімкненим звуком;</li>
+          <li>підготуйте запитання щодо складу та правил прийому.</li>
+        </ul>
+      </div>
+
+      <a href="../../" class="mt-8 inline-block rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-8 py-3.5 text-sm font-extrabold uppercase tracking-wide text-white shadow-lg shadow-emerald-600/40 transition hover:from-emerald-600 hover:to-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200">
+        Повернутися на головну
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-forest-900">
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+      <p class="text-xs leading-relaxed text-white/45">
+        Skineform є дієтичною добавкою і не є лікарським засобом. Самолікування може бути шкідливим для вашого здоров'я.
+        Перед застосуванням проконсультуйтеся з лікарем.
+      </p>
+      <nav class="mt-4 flex flex-wrap gap-x-5 gap-y-1" aria-label="Службові сторінки">
+        <a href="../../privacy/" class="text-xs text-white/50 transition hover:text-white">Політика конфіденційності</a>
+        <a href="../../disclaimer/" class="text-xs text-white/50 transition hover:text-white">Відмова від відповідальності</a>
+        <a href="../../terms/" class="text-xs text-white/50 transition hover:text-white">Умови використання</a>
+        <a href="../../contacts.html" class="text-xs text-white/50 transition hover:text-white">Контакти</a>
+      </nav>
+      <p class="mt-4 text-xs text-white/35">© 2026 Useful Habit. Всі права захищено.</p>
+    </div>
+  </footer>
+</body>
+</html>

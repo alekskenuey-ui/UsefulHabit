@@ -42,7 +42,7 @@
         "@type": "Product",
         "@id": "https://usefulhabit.review/products/skineform/#product",
         "name": "Skineform (Скінеформ)",
-        "description": "Дієтична добавка у капсулах (20 капсул по 400 мг) на основі рослинних екстрактів: зелений чай, виноградні кісточки, гарцинія камбоджійська, артишок, ананас, куркума, імбир.",
+        "description": "Дієтична добавка у капсулах (20 капсул по 400 мг) на основі рослинних компонентів: зелений чай, виноградні кісточки, гарцинія камбоджійська, артишок, ананас, куркума, імбир.",
         "image": "https://usefulhabit.review/assets/skineform_hero.png",
         "category": "Дієтична добавка"
       },
@@ -61,7 +61,7 @@
   <link rel="icon" href="../../assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -78,6 +78,9 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    /* Тематичний фон: капсули, баночка, ваги, трекер, велосипед, фітнес... (assets/bg-icons.svg) */
+    body { background-color: #f4faf6; background-image: url("../../assets/bg-icons.svg"); background-size: 720px 720px; }
+    @media (max-width: 640px) { body { background-size: 520px 520px; } }
     .glass { background: rgba(255,255,255,.72); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
     .check li { position: relative; padding-left: 2rem; }
     .check li::before {
@@ -88,7 +91,7 @@
   </style>
 </head>
 
-<body class="bg-mint-50 font-sans text-slate-700 antialiased">
+<body class="font-sans text-slate-700 antialiased">
 
   <!-- ============ HEADER ============ -->
   <header class="sticky top-0 z-40 glass border-b border-emerald-100">
@@ -119,24 +122,31 @@
     </nav>
   </header>
 
-  <!-- ============ MAIN ============ -->
-  <div class="mx-auto max-w-7xl px-4 pb-28 pt-8 sm:px-6 lg:pb-16 lg:pt-12">
-    <div class="lg:grid lg:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] lg:gap-10">
+  <!-- ============================================================
+       HERO — Tilda-розкладка: зліва 60% (заголовок + блоки), справа 40% (форма)
+       ============================================================ -->
+  <section class="bg-gradient-to-b from-white/70 via-mint-100/60 to-transparent" aria-labelledby="hero-title">
+    <div class="mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 lg:pb-20 lg:pt-14">
 
-      <main>
-        <article>
-          <!-- Розкриття комерційного характеру сторінки -->
-          <p class="mb-6 rounded-xl border border-emerald-200 bg-white/70 px-4 py-3 text-xs leading-relaxed text-slate-600" role="note">
-            <strong class="text-forest-800">Рекламний матеріал.</strong>
-            Ця сторінка є комерційною: ми приймаємо заявки на продукт і передаємо їх представнику бренду.
-            Useful Habit може отримувати винагороду за оформлені замовлення.
-          </p>
+      <!-- Комерційна плашка -->
+      <p class="mb-6 inline-flex items-start gap-2 rounded-2xl border border-emerald-200 bg-white/90 px-4 py-2 text-xs leading-relaxed text-slate-600 sm:items-center sm:rounded-full" role="note">
+        <span class="text-amber-500" aria-hidden="true">ℹ</span>
+        <span><strong class="text-forest-800">Рекламний матеріал.</strong>
+        Ця сторінка є комерційною: ми приймаємо заявки на продукт і передаємо їх представнику бренду. Useful Habit може отримувати винагороду за оформлені замовлення.</span>
+      </p>
 
-          <nav aria-label="Хлібні крихти" class="mb-4 text-xs text-slate-500">
-            <a href="../../" class="hover:text-emerald-600">Головна</a> <span aria-hidden="true">/</span> <span>Skineform</span>
-          </nav>
+      <nav aria-label="Хлібні крихти" class="mb-5 text-xs text-slate-500">
+        <a href="../../" class="hover:text-emerald-600">Головна</a>
+        <span aria-hidden="true" class="mx-1.5">›</span>
+        <span>Skineform</span>
+      </nav>
 
-          <h1 class="font-serif text-3xl font-bold leading-tight text-forest-900 sm:text-4xl lg:text-5xl">
+      <div class="grid items-start gap-10 lg:grid-cols-[3fr_2fr] lg:gap-14">
+
+        <!-- LEFT 60% -->
+        <div>
+          <span class="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-700">Тонус та обмін речовин</span>
+          <h1 id="hero-title" class="font-serif text-3xl font-bold leading-tight text-forest-900 sm:text-4xl lg:text-5xl lg:leading-[1.12]">
             Skineform: Природна підтримка метаболізму та вашого балансу
           </h1>
           <p class="mt-5 text-lg leading-relaxed text-slate-600">
@@ -144,147 +154,192 @@
             та контролювати щоденний раціон без виснаження.
           </p>
 
-          <!-- Головний банер -->
-          <figure class="mt-8 overflow-hidden rounded-3xl bg-emerald-100 shadow-lg shadow-emerald-900/5">
-            <img src="../../assets/skineform_hero.png" alt="Упаковка дієтичної добавки Skineform поруч з ананасом, імбиром і куркумою на пастельно-зеленому тлі"
-                 width="820" height="1018" class="mx-auto max-h-[620px] w-full object-cover object-[50%_55%]" fetchpriority="high" />
-          </figure>
-
-          <!-- Блок 1 -->
-          <section class="mt-14" aria-labelledby="why">
-            <h2 id="why" class="font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Чому це важливо?</h2>
-            <div class="mt-4 space-y-4 leading-relaxed">
-              <p>Сучасний ритм життя рідко залишає місце для регулярного режиму: нічні роботи, перекуси на ходу, дедлайни,
-                 мало сну й мало руху. Усе це поступово збиває біологічні ритми організму, а разом з ними — і щоденну роботу травлення та обмін речовин.</p>
-              <p>З віком і на тлі хронічної втоми обмінні процеси можуть сповільнюватися, апетит стає менш передбачуваним, а тяга до солодкого — сильнішою.
-                 Жодна добавка не замінить збалансованого харчування, сну та фізичної активності.</p>
-              <p><strong class="text-forest-800">Skineform</strong> розглядається як допоміжний рослинний інструмент: комплекс екстрактів і прянощів,
-                 який може доповнювати здорові звички, а не підміняти їх.</p>
+          <!-- Великі блоки переваг: по два в ряд -->
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:gap-5">
+            <div class="flex flex-col items-center justify-center gap-3 rounded-3xl border border-emerald-100 bg-white/90 px-4 py-7 text-center shadow-md shadow-emerald-900/5 sm:py-9">
+              <span class="text-4xl sm:text-5xl" aria-hidden="true">🍃</span>
+              <span class="text-base font-bold leading-snug text-forest-800 sm:text-lg">7 рослинних компонентів</span>
             </div>
-          </section>
-
-          <!-- Блок 2: Склад -->
-          <section class="mt-14" aria-labelledby="formula">
-            <h2 id="formula" class="font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Формула активних компонентів</h2>
-            <p class="mt-3 text-slate-600">Чотири групи рослинних інгредієнтів, кожна з яких відповідає за свій напрямок підтримки.</p>
-
-            <div class="mt-6 grid gap-5 sm:grid-cols-2">
-              <div class="overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm">
-                <img src="../../assets/green_tea.png" alt="Чашка зеленого чаю на дерев'яній підставці з листям" width="640" height="857" loading="lazy" class="aspect-[4/3] w-full object-cover" />
-                <div class="p-5">
-                  <h3 class="font-semibold text-forest-800">1. Зелений чай та виноградні кісточки</h3>
-                  <p class="mt-2 text-sm leading-relaxed">Екстракти — джерело поліфенолів, потужних антиоксидантів, що допомагають захищати клітини від окисного стресу.</p>
-                </div>
-              </div>
-
-              <div class="overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm">
-                <img src="../../assets/garcinia.png" alt="Плід гарцинії камбоджійської з листям на дерев'яній тарілці" width="640" height="857" loading="lazy" class="aspect-[4/3] w-full object-cover" />
-                <div class="p-5">
-                  <h3 class="font-semibold text-forest-800">2. Гарцинія камбоджійська</h3>
-                  <p class="mt-2 text-sm leading-relaxed">Екстракт традиційно використовують, щоб легше контролювати тягу до солодкого та відчуття голоду між прийомами їжі.</p>
-                </div>
-              </div>
-
-              <div class="overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm">
-                <img src="../../assets/artichoke.png" alt="Бутон і зріз артишоку на дерев'яному підносі" width="640" height="857" loading="lazy" class="aspect-[4/3] w-full object-cover" />
-                <div class="p-5">
-                  <h3 class="font-semibold text-forest-800">3. Артишок та ананас</h3>
-                  <p class="mt-2 text-sm leading-relaxed">Екстракти допомагають підтримувати оптимальний водний баланс та м'який дренаж, а також комфорт травлення.</p>
-                </div>
-              </div>
-
-              <div class="flex flex-col justify-center rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-amber-50 p-6 shadow-sm">
-                <p class="text-4xl" aria-hidden="true">🌿</p>
-                <h3 class="mt-3 font-semibold text-forest-800">4. Куркума та імбир</h3>
-                <p class="mt-2 text-sm leading-relaxed">Порошки прянощів, які традиційно застосовують для оптимізації травлення та підтримки «теплого» метаболізму.</p>
-              </div>
+            <div class="flex flex-col items-center justify-center gap-3 rounded-3xl border border-emerald-100 bg-white/90 px-4 py-7 text-center shadow-md shadow-emerald-900/5 sm:py-9">
+              <span class="text-4xl sm:text-5xl" aria-hidden="true">💊</span>
+              <span class="text-base font-bold leading-snug text-forest-800 sm:text-lg">20 капсул × 400 мг</span>
             </div>
-          </section>
-
-          <!-- Блок 3 -->
-          <section class="mt-14" aria-labelledby="tasks">
-            <h2 id="tasks" class="font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Які завдання вирішує продукт</h2>
-            <ul class="check mt-5 space-y-3 text-base">
-              <li><strong class="text-forest-800">Підтримка обмінних процесів.</strong> Допомагає організму ефективніше працювати у складі збалансованого раціону.</li>
-              <li><strong class="text-forest-800">Допомога у контролі апетиту.</strong> Може полегшувати дотримання режиму харчування.</li>
-              <li><strong class="text-forest-800">Підтримка нормального рівня глюкози.</strong> У поєднанні зі здоровим харчуванням.</li>
-              <li><strong class="text-forest-800">М'який дренажний ефект.</strong> Підтримка водного балансу організму.</li>
-            </ul>
-          </section>
-
-          <!-- Блок 4 -->
-          <section class="mt-14" aria-labelledby="rules">
-            <h2 id="rules" class="font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Прості правила використання</h2>
-            <figure class="mt-5 overflow-hidden rounded-3xl shadow-lg shadow-emerald-900/5">
-              <img src="../../assets/step_schema.png" alt="Покрокова схема: 1 — прийом капсули зі склянкою води, 2 — збалансоване харчування, 3 — прогулянки та рух"
-                   width="1000" height="747" loading="lazy" class="w-full" />
-            </figure>
-            <div class="mt-6 rounded-2xl border border-emerald-100 bg-white p-6">
-              <ul class="check space-y-3">
-                <li><strong class="text-forest-800">Дозування:</strong> 1–2 капсули на добу під час їди, запиваючи склянкою води.</li>
-                <li><strong class="text-forest-800">Курс:</strong> від 30 днів. Точну схему уточнюйте на упаковці та у лікаря.</li>
-                <li><strong class="text-forest-800">Поєднуйте</strong> прийом зі збалансованим раціоном і щоденною активністю.</li>
-              </ul>
+            <div class="flex flex-col items-center justify-center gap-3 rounded-3xl border border-emerald-100 bg-white/90 px-4 py-7 text-center shadow-md shadow-emerald-900/5 sm:py-9">
+              <span class="text-4xl sm:text-5xl" aria-hidden="true">⚡</span>
+              <span class="text-base font-bold leading-snug text-forest-800 sm:text-lg">Підтримка метаболізму</span>
             </div>
-          </section>
-
-          <!-- Блок 5: Застереження -->
-          <aside class="mt-14 rounded-2xl border-l-4 border-amber-400 bg-amber-50 p-6" role="note" aria-labelledby="warn">
-            <h2 id="warn" class="flex items-center gap-2 text-lg font-bold text-amber-900"><span aria-hidden="true">⚠️</span> Експертне застереження</h2>
-            <p class="mt-3 text-sm leading-relaxed text-amber-950">
-              Skineform є дієтичною добавкою, а не лікарським засобом, і не призначений для діагностики, лікування чи профілактики захворювань.
-              Не застосовуйте при індивідуальній непереносимості компонентів. Вагітним і жінкам, які годують груддю, особам до 18 років,
-              а також людям із захворюваннями (зокрема цукровим діабетом, хворобами печінки, жовчного міхура чи ШКТ) або тим, хто приймає ліки,
-              необхідна попередня консультація лікаря.
-            </p>
-          </aside>
-        </article>
-      </main>
-
-      <!-- ============ ПРАВА КОЛОНКА ============ -->
-      <aside class="mt-12 lg:mt-0" aria-label="Запит на ціну та консультацію">
-        <div id="request" class="glass scroll-mt-28 rounded-3xl border border-emerald-200 p-6 shadow-xl shadow-emerald-900/10 lg:sticky lg:top-28">
-          <img src="../../assets/shield_icon.png" alt="Смарагдовий щит із медичним хрестом і листочками" width="520" height="336" class="mx-auto h-28 w-auto rounded-2xl" />
-
-          <h2 class="mt-4 text-center text-sm font-extrabold uppercase tracking-wide text-forest-800">🔎 Запит на ціну та наявність</h2>
-          <p class="mt-3 text-center text-sm leading-relaxed text-slate-600">
-            Актуальну вартість і наявність уточнює представник бренду під ваш курс.
-          </p>
-          <p class="mt-3 text-sm leading-relaxed">
-            Бажаєте дізнатися точну вартість під ваш курс та безкоштовно отримати консультацію фахівця? Залиште швидку заявку.
-            Представник бренду зв'яжеться з вами у робочий час (зазвичай протягом 10–15 хвилин), відповість на запитання щодо складу та забронює продукт.
-          </p>
-
-          <form id="lead-form" class="mt-5 space-y-3" novalidate>
-            <div>
-              <label for="name" class="sr-only">Ваше ім'я</label>
-              <input id="name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Ваше ім'я"
-                     class="w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200" />
+            <div class="flex flex-col items-center justify-center gap-3 rounded-3xl border border-emerald-100 bg-white/90 px-4 py-7 text-center shadow-md shadow-emerald-900/5 sm:py-9">
+              <span class="text-4xl sm:text-5xl" aria-hidden="true">💬</span>
+              <span class="text-base font-bold leading-snug text-forest-800 sm:text-lg">Безкоштовна консультація</span>
             </div>
-            <div>
-              <label for="phone" class="sr-only">Номер телефону</label>
-              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="Номер телефону (+380...)"
-                     class="w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200" />
-            </div>
-            <label class="flex items-start gap-2 text-xs leading-snug text-slate-600">
-              <input id="consent" type="checkbox" required class="mt-0.5 h-4 w-4 rounded border-emerald-300 text-emerald-600 focus:ring-emerald-300" />
-              <span>Погоджуюсь на обробку персональних даних відповідно до <a href="../../privacy/" class="text-emerald-700 underline">політики конфіденційності</a>.</span>
-            </label>
-            <button type="submit"
-                    class="w-full rounded-xl bg-emerald-600 px-4 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-emerald-600/30 transition hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200">
-              Надіслати запит та дізнатися ціну
-            </button>
-            <p id="form-msg" class="hidden rounded-lg px-3 py-2 text-sm" role="status" aria-live="polite"></p>
-          </form>
-
-          <p class="mt-4 text-[11px] leading-snug text-slate-500">
-            *Ваші дані захищені. Натискаючи кнопку, ви погоджуєтесь з <a href="../../privacy/" class="underline">політикою конфіденційності</a> сайту.
-          </p>
+          </div>
         </div>
+
+        <!-- RIGHT 40%: форма -->
+        <aside aria-label="Запит на ціну та консультацію" class="pt-10">
+          <div id="request" class="scroll-mt-28 lg:sticky lg:top-28">
+            <div class="relative rounded-[28px] border-[3px] border-emerald-500 bg-white shadow-2xl shadow-emerald-900/25 ring-8 ring-emerald-200/60">
+
+              <!-- Щит з активу — виступає над рамкою -->
+              <div class="absolute -top-10 left-1/2 h-20 w-20 -translate-x-1/2 overflow-hidden rounded-full border-4 border-white bg-mint-100 shadow-lg ring-2 ring-emerald-500">
+                <img src="../../assets/shield_icon.png" alt="Смарагдовий щит із медичним хрестом і листочками" width="520" height="336" class="h-full w-full object-cover object-[44%_50%] scale-125" />
+              </div>
+
+              <div class="rounded-t-[24px] bg-gradient-to-br from-emerald-600 to-forest-700 px-6 pb-6 pt-14 text-center text-white">
+                <h2 class="text-xl font-extrabold uppercase leading-tight tracking-wide sm:text-2xl">Дізнайтеся ціну та отримайте консультацію</h2>
+                <p class="mt-2 text-sm leading-relaxed text-emerald-50">
+                  Залиште заявку — представник бренду зв'яжеться з вами у робочий час, зазвичай протягом 10–15 хвилин.
+                </p>
+              </div>
+
+              <div class="p-6">
+                <p class="text-sm leading-relaxed text-slate-600">
+                  Безкоштовно: точна вартість під ваш курс, відповіді щодо складу та бронювання продукту.
+                </p>
+
+                <form id="lead-form" class="mt-5 space-y-3.5" novalidate>
+                  <div>
+                    <label for="name" class="mb-1 block text-xs font-bold uppercase tracking-wide text-forest-800">Ваше ім'я</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Ваше ім'я"
+                           class="w-full rounded-xl border-2 border-emerald-200 bg-mint-50 px-4 py-3.5 text-base placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-emerald-100" />
+                  </div>
+                  <div>
+                    <label for="phone" class="mb-1 block text-xs font-bold uppercase tracking-wide text-forest-800">Номер телефону</label>
+                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+380..."
+                           class="w-full rounded-xl border-2 border-emerald-200 bg-mint-50 px-4 py-3.5 text-base placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-emerald-100" />
+                  </div>
+                  <label class="flex items-start gap-2 text-xs leading-snug text-slate-600">
+                    <input id="consent" type="checkbox" required class="mt-0.5 h-4 w-4 rounded border-emerald-300 text-emerald-600 focus:ring-emerald-300" />
+                    <span>Погоджуюсь на обробку персональних даних відповідно до <a href="../../privacy/" class="text-emerald-700 underline">політики конфіденційності</a>.</span>
+                  </label>
+                  <button id="submit-btn" type="submit"
+                          class="w-full rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-4 py-4 text-sm font-extrabold uppercase leading-snug tracking-wide text-white shadow-lg shadow-emerald-600/40 transition hover:from-emerald-600 hover:to-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200 disabled:cursor-wait disabled:opacity-70 sm:text-base">
+                    Надіслати запит та дізнатися ціну
+                  </button>
+                  <p id="form-msg" class="hidden rounded-xl px-3 py-2.5 text-sm" role="alert" aria-live="assertive"></p>
+                </form>
+
+                <p class="mt-4 text-[11px] leading-snug text-slate-500">
+                  *Ваші дані захищені. Натискаючи кнопку, ви погоджуєтесь з <a href="../../privacy/" class="underline">політикою конфіденційності</a> сайту.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       КОНТЕНТ — блоки на всю ширину, як у конструкторі
+       ============================================================ -->
+  <main>
+    <div class="mx-auto max-w-7xl space-y-12 px-4 pb-28 pt-6 sm:px-6 lg:space-y-16 lg:pb-20">
+
+      <!-- ОПИС: 60% текст + 40% фото -->
+      <section aria-labelledby="why" class="grid items-stretch gap-6 lg:grid-cols-[3fr_2fr] lg:gap-8">
+        <div class="rounded-3xl bg-white/90 p-6 shadow-lg shadow-emerald-900/5 backdrop-blur-sm sm:p-9">
+          <h2 id="why" class="font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Що собою являє Skineform</h2>
+          <div class="mt-5 space-y-4 leading-relaxed">
+            <p>Сучасний ритм життя рідко залишає місце для регулярного режиму: перекуси на ходу, дедлайни, мало сну й мало руху. Усе це поступово збиває біоритми організму, а разом з ними — і щоденну роботу травлення та обмін речовин.</p>
+            <p>У формулі <strong class="text-forest-800">Skineform</strong> — сім рослинних компонентів: екстракти зеленого чаю та виноградних кісточок, гарцинії камбоджійської, артишоку й ананаса, а також порошки куркуми та імбиру. Кожен з них відповідає за свій напрямок підтримки організму.</p>
+            <p>Skineform не є лікарським засобом і не замінює збалансованого раціону, сну та фізичної активності. Це допоміжний рослинний комплекс, який може доповнювати здорові звички — а не підміняти їх.</p>
+          </div>
+        </div>
+        <figure class="relative min-h-[360px] overflow-hidden rounded-3xl bg-emerald-100 shadow-lg shadow-emerald-900/10">
+          <img src="../../assets/skineform_hero.png"
+               alt="Упаковка дієтичної добавки Skineform поруч з ананасом, імбиром і куркумою на пастельно-зеленому тлі"
+               width="820" height="1018" class="absolute inset-0 h-full w-full object-cover object-[50%_60%]" fetchpriority="high" />
+        </figure>
+      </section>
+
+      <!-- СКЛАД: 4 в ряд на десктопі, по 2 на мобільному -->
+      <section aria-labelledby="formula" class="rounded-3xl bg-white/90 p-6 shadow-lg shadow-emerald-900/5 backdrop-blur-sm sm:p-9">
+        <h2 id="formula" class="text-center font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Формула активних компонентів</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-center text-slate-600">Чотири групи рослинних компонентів, кожна з яких відповідає за свій напрямок підтримки.</p>
+
+        <div class="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+          <div class="flex flex-col items-center rounded-2xl border border-emerald-100 bg-mint-50 p-4 text-center sm:p-5">
+            <img src="../../assets/ing_green_tea.webp" alt="Зелений чай" width="112" height="112" loading="lazy" class="h-24 w-24 rounded-full object-cover ring-4 ring-emerald-200 sm:h-28 sm:w-28" />
+            <h3 class="mt-4 text-sm font-bold leading-snug text-forest-800 sm:text-base">Зелений чай та виноградні кісточки</h3>
+            <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">Джерело поліфенолів — антиоксидантів, що допомагають захищати клітини від окисного стресу.</p>
+          </div>
+          <div class="flex flex-col items-center rounded-2xl border border-emerald-100 bg-mint-50 p-4 text-center sm:p-5">
+            <img src="../../assets/ing_garcinia.webp" alt="Гарцинія камбоджійська" width="112" height="112" loading="lazy" class="h-24 w-24 rounded-full object-cover ring-4 ring-emerald-200 sm:h-28 sm:w-28" />
+            <h3 class="mt-4 text-sm font-bold leading-snug text-forest-800 sm:text-base">Гарцинія камбоджійська</h3>
+            <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">Традиційно використовують для підтримки контролю апетиту між прийомами їжі.</p>
+          </div>
+          <div class="flex flex-col items-center rounded-2xl border border-emerald-100 bg-mint-50 p-4 text-center sm:p-5">
+            <img src="../../assets/ing_artichoke.webp" alt="Артишок" width="112" height="112" loading="lazy" class="h-24 w-24 rounded-full object-cover ring-4 ring-emerald-200 sm:h-28 sm:w-28" />
+            <h3 class="mt-4 text-sm font-bold leading-snug text-forest-800 sm:text-base">Артишок та ананас</h3>
+            <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">Підтримка водного балансу, м'який дренаж та комфорт травлення.</p>
+          </div>
+          <div class="flex flex-col items-center rounded-2xl border border-emerald-100 bg-mint-50 p-4 text-center sm:p-5">
+            <img src="../../assets/ing_turmeric_ginger.webp" alt="Куркума та імбир" width="112" height="112" loading="lazy" class="h-24 w-24 rounded-full object-cover ring-4 ring-emerald-200 sm:h-28 sm:w-28" />
+            <h3 class="mt-4 text-sm font-bold leading-snug text-forest-800 sm:text-base">Куркума та імбир</h3>
+            <p class="mt-2 text-xs leading-relaxed text-slate-600 sm:text-sm">Традиційні прянощі для підтримки травлення та «теплого» метаболізму.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ЗАВДАННЯ -->
+      <section aria-labelledby="tasks" class="rounded-3xl bg-white/90 p-6 shadow-lg shadow-emerald-900/5 backdrop-blur-sm sm:p-9">
+        <h2 id="tasks" class="font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Які завдання вирішує продукт</h2>
+        <ul class="check mt-6 grid gap-x-10 gap-y-5 text-base md:grid-cols-2">
+          <li><strong class="text-forest-800">Підтримка обмінних процесів.</strong> Допомагає організму ефективніше працювати у складі збалансованого раціону.</li>
+          <li><strong class="text-forest-800">Допомога у контролі апетиту.</strong> Може полегшувати дотримання режиму харчування.</li>
+          <li><strong class="text-forest-800">Підтримка нормального рівня глюкози.</strong> У поєднанні зі здоровим харчуванням.</li>
+          <li><strong class="text-forest-800">М'який дренажний ефект.</strong> Підтримка водного балансу організму.</li>
+        </ul>
+      </section>
+
+      <!-- ПРАВИЛА: текст 40% + схема 60% -->
+      <section aria-labelledby="rules" class="grid items-stretch gap-6 lg:grid-cols-[2fr_3fr] lg:gap-8">
+        <div class="rounded-3xl bg-white/90 p-6 shadow-lg shadow-emerald-900/5 backdrop-blur-sm sm:p-9">
+          <h2 id="rules" class="font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Прості правила використання</h2>
+          <ul class="check mt-6 space-y-4">
+            <li><strong class="text-forest-800">Дозування:</strong> 1–2 капсули на добу під час їди, запиваючи склянкою води.</li>
+            <li><strong class="text-forest-800">Курс:</strong> від 30 днів. Точну схему уточнюйте на упаковці та у лікаря.</li>
+            <li><strong class="text-forest-800">Поєднуйте</strong> прийом зі збалансованим раціоном і щоденною активністю.</li>
+          </ul>
+        </div>
+        <figure class="overflow-hidden rounded-3xl bg-emerald-100 shadow-lg shadow-emerald-900/10">
+          <img src="../../assets/step_schema.png" alt="Покрокова схема: 1 — прийом капсули зі склянкою води, 2 — збалансоване харчування, 3 — прогулянки та рух"
+               width="1000" height="747" loading="lazy" class="h-full w-full object-cover" />
+        </figure>
+      </section>
+
+      <!-- Повторний CTA -->
+      <section aria-label="Повторний заклик до дії">
+        <div class="rounded-3xl bg-gradient-to-br from-forest-900 to-forest-700 p-8 text-white shadow-xl sm:p-10">
+          <div class="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-widest text-emerald-300">Готові спробувати?</p>
+              <p class="mt-1 text-xl font-bold leading-snug sm:text-2xl">Дізнайтеся актуальну ціну та наявність Skineform</p>
+              <p class="mt-2 text-sm leading-relaxed text-white/70">Представник бренду відповість у робочий час, зазвичай протягом 10–15 хвилин.</p>
+            </div>
+            <a href="#request"
+               class="shrink-0 rounded-xl bg-emerald-500 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-md shadow-emerald-900/30 transition hover:bg-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-300">
+              Надіслати запит ↑
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Застереження -->
+      <aside class="rounded-2xl border-l-4 border-amber-400 bg-amber-50 p-6 shadow-sm" role="note" aria-labelledby="warn">
+        <h2 id="warn" class="flex items-center gap-2 text-lg font-bold text-amber-900"><span aria-hidden="true">⚠️</span> Експертне застереження</h2>
+        <p class="mt-3 text-sm leading-relaxed text-amber-950">
+          Skineform є дієтичною добавкою, а не лікарським засобом, і не призначений для діагностики, лікування чи профілактики захворювань.
+          Не застосовуйте при індивідуальній непереносимості компонентів. Вагітним і жінкам, які годують груддю, особам до 18 років,
+          а також людям із захворюваннями (зокрема цукровим діабетом, хворобами печінки, жовчного міхура чи ШКТ) або тим, хто приймає ліки,
+          необхідна попередня консультація лікаря.
+        </p>
       </aside>
 
     </div>
-  </div>
+  </main>
 
   <!-- Мобільна нижня панель із CTA -->
   <div class="glass fixed inset-x-0 bottom-0 z-30 border-t border-emerald-200 p-3 lg:hidden">
@@ -292,60 +347,148 @@
   </div>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="border-t border-emerald-100 bg-white/60">
-    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6">
-      <p class="text-xs leading-relaxed text-slate-500" role="note">
-        <strong>Дисклеймер:</strong> Самолікування може бути шкідливим для вашого здоров'я. Інформація на цій сторінці має ознайомчий характер
-        і не є медичною консультацією, діагнозом чи рекомендацією до лікування. Skineform є дієтичною добавкою і не є лікарським засобом.
-        Результати застосування дієтичної добавки «Skineform» є виключно індивідуальними та напряму залежать від особливостей вашого організму,
-        способу життя, харчування та регулярності прийому. Перед застосуванням проконсультуйтеся з лікарем, особливо за наявності хронічних захворювань,
-        вагітності, лактації або при прийомі медикаментів. Сторінка має рекламний характер: Useful Habit приймає заявки на продукт та передає їх
-        представнику бренду і може отримувати винагороду за замовлення. Назви та зображення продуктів належать їхнім правовласникам.
-      </p>
-      <nav class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-forest-800" aria-label="Службові сторінки">
-        <a href="../../privacy/" class="hover:text-emerald-600">Політика конфіденційності</a>
-        <a href="../../disclaimer/" class="hover:text-emerald-600">Відмова від відповідальності</a>
-        <a href="../../terms/" class="hover:text-emerald-600">Умови використання</a>
-        <a href="../../contacts/" class="hover:text-emerald-600">Контакти</a>
-      </nav>
-      <p class="mt-6 text-xs text-slate-400">© 2026 Useful Habit. Всі права захищено.</p>
+  <footer class="bg-forest-900" aria-label="Підвал сайту">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+
+      <div class="grid gap-10 border-b border-white/10 pb-10 sm:grid-cols-3">
+        <div>
+          <span class="text-lg font-semibold text-white"><span class="text-emerald-400">Useful</span> Habit</span>
+          <p class="mt-3 text-sm leading-relaxed text-white/55">
+            Інформаційний велнес-портал про дієтичні добавки та нутрицевтики: склад, правила прийому, застереження.
+          </p>
+        </div>
+        <div>
+          <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-emerald-400">Розділи</h4>
+          <ul class="space-y-2">
+            <li><a href="../../" class="text-sm text-white/60 transition hover:text-white">Головна</a></li>
+            <li><a href="../../active-life/" class="text-sm text-white/60 transition hover:text-white">Активне життя</a></li>
+            <li><a href="../../metabolism/" class="text-sm text-white/60 transition hover:text-white">Тонус та обмін речовин</a></li>
+            <li><a href="../../beauty/" class="text-sm text-white/60 transition hover:text-white">Краса та молодість</a></li>
+            <li><a href="../../about/" class="text-sm text-white/60 transition hover:text-white">Про нас</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="mb-3 text-xs font-semibold uppercase tracking-widest text-emerald-400">Правова інформація</h4>
+          <ul class="space-y-2">
+            <li><a href="../../privacy/" class="text-sm text-white/60 transition hover:text-white">Політика конфіденційності</a></li>
+            <li><a href="../../disclaimer/" class="text-sm text-white/60 transition hover:text-white">Відмова від відповідальності</a></li>
+            <li><a href="../../terms/" class="text-sm text-white/60 transition hover:text-white">Умови використання</a></li>
+            <li><a href="../../contacts.html" class="text-sm text-white/60 transition hover:text-white">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-xl border border-white/10 bg-white/5 p-5" role="note">
+        <p class="mb-1 text-xs font-semibold uppercase tracking-wider text-emerald-300/80">Правовий дисклеймер</p>
+        <p class="text-xs leading-relaxed text-white/45">
+          Самолікування може бути шкідливим для вашого здоров'я. Інформація на цій сторінці має ознайомчий характер
+          і не є медичною консультацією, діагнозом чи рекомендацією до лікування. Skineform є дієтичною добавкою і не є лікарським засобом.
+          Результати застосування є виключно індивідуальними та залежать від особливостей організму, способу життя, харчування та регулярності прийому.
+          Перед застосуванням проконсультуйтеся з лікарем, особливо за наявності хронічних захворювань, вагітності, лактації або при прийомі медикаментів.
+          Сторінка має рекламний характер: Useful Habit приймає заявки на продукт та передає їх представнику бренду і може отримувати винагороду за замовлення.
+          Назви та зображення продуктів належать їхнім правовласникам.
+        </p>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
+        <p class="text-xs text-white/35">© 2026 Useful Habit. Всі права захищено.</p>
+        <nav class="flex flex-wrap gap-x-5 gap-y-1" aria-label="Допоміжні посилання">
+          <a href="../../privacy/" class="text-xs text-white/40 transition hover:text-white">Конфіденційність</a>
+          <a href="../../disclaimer/" class="text-xs text-white/40 transition hover:text-white">Дисклеймер</a>
+          <a href="../../terms/" class="text-xs text-white/40 transition hover:text-white">Умови</a>
+          <a href="../../contacts.html" class="text-xs text-white/40 transition hover:text-white">Контакти</a>
+        </nav>
+      </div>
+
     </div>
   </footer>
 
   <script>
-    // URL, на який форма надсилає заявки (наприклад, Formspree, Make/Zapier webhook, ваш CRM-ендпоінт).
-    // Поки він порожній, форма нічого не відправляє і чесно повідомляє про це відвідувачу.
-    var FORM_ENDPOINT = "";
-
+    /* Відправка заявки в EnsoTraffic: чистий клієнтський JS (fetch), без PHP — підходить для GitHub Pages. */
     (function () {
+      var API_URL = "https://ensotraffic.tech/api/wm/push.json?id=1343-5ff122e883e7e5ba683e86fc333e7f41";
+      var IP_URL  = "https://api.ipify.org?format=json";   // безкоштовний сервіс визначення IP клієнта
+      var OFFER   = 190;
+      var FLOW    = 1995;
+      var THANK_YOU = "thank-you.html";
+
       var form = document.getElementById("lead-form");
-      var msg = document.getElementById("form-msg");
+      var msg  = document.getElementById("form-msg");
+      var btn  = document.getElementById("submit-btn");
+      var btnText = btn.textContent;
+
       function show(text, ok) {
         msg.textContent = text;
-        msg.className = "rounded-lg px-3 py-2 text-sm " + (ok ? "bg-emerald-50 text-emerald-800" : "bg-red-50 text-red-700");
+        msg.className = "rounded-xl px-3 py-2.5 text-sm " + (ok ? "bg-emerald-50 text-emerald-800" : "bg-red-50 text-red-700");
       }
+
+      // IP клієнта: якщо сервіс недоступний — не блокуємо заявку, а відправляємо без IP.
+      function getIp() {
+        var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+        var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 3000) : null;
+        return fetch(IP_URL, ctrl ? { signal: ctrl.signal } : {})
+          .then(function (r) { return r.json(); })
+          .then(function (d) { return (d && d.ip) || ""; })
+          .catch(function () { return ""; })
+          .finally(function () { if (timer) clearTimeout(timer); });
+      }
+
+      // +380XXXXXXXXX | 380XXXXXXXXX | 0XXXXXXXXX  ->  +380XXXXXXXXX
+      function normalizePhone(raw) {
+        var d = String(raw).replace(/\D/g, "");
+        if (/^380\d{9}$/.test(d)) return "+" + d;
+        if (/^0\d{9}$/.test(d))   return "+38" + d;
+        return null;
+      }
+
+      // Текст помилки з відповіді API (щоб ліди не губилися мовчки)
+      function apiError(data, status) {
+        if (data) {
+          var e = data.message || data.error || data.errors || data.status;
+          if (e) return typeof e === "string" ? e : JSON.stringify(e);
+        }
+        return "HTTP " + status;
+      }
+
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var name = form.name.value.trim();
-        var phone = form.phone.value.replace(/[\s\-()]/g, "");
+        var name  = form.elements["name"].value.trim();
+        var phone = normalizePhone(form.elements["phone"].value);
         if (name.length < 2) return show("Вкажіть, будь ласка, ваше ім'я.", false);
-        if (!/^\+?380\d{9}$/.test(phone)) return show("Введіть номер у форматі +380XXXXXXXXX.", false);
+        if (!phone)          return show("Введіть номер у форматі +380XXXXXXXXX.", false);
         if (!document.getElementById("consent").checked) return show("Потрібна згода на обробку персональних даних.", false);
-        if (!FORM_ENDPOINT) return show("Форма тимчасово недоступна. Спробуйте, будь ласка, пізніше.", false);
 
-        var btn = form.querySelector("button[type=submit]");
-        btn.disabled = true;
-        fetch(FORM_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({ name: name, phone: phone, page: location.href, product: "Skineform" })
+        btn.disabled = true; btn.textContent = "Надсилаємо…"; msg.className = "hidden";
+
+        getIp().then(function (ip) {
+          return fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              offer: OFFER,
+              flow: FLOW,
+              name: name,
+              phone: phone,
+              ip: ip,
+              ua: navigator.userAgent
+            })
+          });
         }).then(function (r) {
-          if (!r.ok) throw new Error("HTTP " + r.status);
-          form.reset();
-          show("Дякуємо! Заявку отримано, представник зв'яжеться з вами.", true);
-        }).catch(function () {
-          show("Не вдалося надіслати заявку. Спробуйте ще раз пізніше.", false);
-        }).finally(function () { btn.disabled = false; });
+          return r.text().then(function (txt) {
+            var data = null;
+            try { data = JSON.parse(txt); } catch (err) {}
+            if (data && data.status === "ok") {
+              window.location.href = THANK_YOU;
+              return;
+            }
+            show("Не вдалося надіслати заявку: " + apiError(data, r.status) + ". Спробуйте ще раз.", false);
+          });
+        }).catch(function (err) {
+          if (window.console) console.error("Lead submit failed:", err);
+          show("Не вдалося надіслати заявку (немає зв'язку із сервером). Перевірте інтернет і спробуйте ще раз.", false);
+        }).finally(function () {
+          btn.disabled = false; btn.textContent = btnText;
+        });
       });
     })();
   </script>

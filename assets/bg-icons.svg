@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="720" viewBox="0 0 720 720">
+  <!-- Тематичний фон Useful Habit: капсули, баночка, ваги, трекер, велосипед, фітнес, вода, фрукти. Тайл безшовний. -->
+  <defs>
+    <g id="capsule">
+      <rect x="4" y="22" width="56" height="20" rx="10"/>
+      <path d="M32 22h18a10 10 0 0 1 0 20H32z" fill="currentColor" fill-opacity=".16"/>
+      <path d="M32 22v20M14 28v8"/>
+    </g>
+    <g id="jar">
+      <rect x="12" y="8" width="40" height="11" rx="3"/>
+      <rect x="14" y="19" width="36" height="38" rx="7"/>
+      <rect x="20" y="29" width="24" height="18" rx="3" fill="currentColor" fill-opacity=".14"/>
+      <path d="M32 33v10M27 38h10"/>
+    </g>
+    <g id="scale">
+      <rect x="6" y="8" width="52" height="48" rx="11"/>
+      <path d="M18 27a14 14 0 0 1 28 0z" fill="currentColor" fill-opacity=".14"/>
+      <path d="M32 27l5-8M18 44h28"/>
+    </g>
+    <g id="watch">
+      <path d="M23 4h18l2 13H21zM21 47h22l-2 13H23z"/>
+      <rect x="14" y="16" width="36" height="32" rx="10" fill="currentColor" fill-opacity=".1"/>
+      <path d="M20 33h7l3-8 5 14 3-6h6"/>
+    </g>
+    <g id="bike">
+      <circle cx="14" cy="42" r="11"/>
+      <circle cx="50" cy="42" r="11"/>
+      <path d="M14 42h18l-8-19h17l9 19M32 42l9-19M22 17h8M41 23l-3-8h5"/>
+    </g>
+    <g id="dumbbell">
+      <rect x="3" y="24" width="8" height="16" rx="2.5" fill="currentColor" fill-opacity=".14"/>
+      <rect x="11" y="18" width="9" height="28" rx="3" fill="currentColor" fill-opacity=".14"/>
+      <rect x="44" y="18" width="9" height="28" rx="3" fill="currentColor" fill-opacity=".14"/>
+      <rect x="53" y="24" width="8" height="16" rx="2.5" fill="currentColor" fill-opacity=".14"/>
+      <path d="M20 32h24"/>
+    </g>
+    <g id="bottle">
+      <rect x="25" y="4" width="14" height="9" rx="3"/>
+      <path d="M22 13h20a4 4 0 0 1 4 4v37a6 6 0 0 1-6 6H24a6 6 0 0 1-6-6V17a4 4 0 0 1 4-4z"/>
+      <path d="M18 30h28v12H18z" fill="currentColor" fill-opacity=".14"/>
+    </g>
+    <g id="apple">
+      <path d="M32 20c-5-6-18-3-18 12 0 13 8 25 18 21 10 4 18-8 18-21 0-15-13-18-18-12z" fill="currentColor" fill-opacity=".12"/>
+      <path d="M32 20c0-7 3-11 8-13M36 10c4-1 8 0 10 3-4 2-8 1-10-3z"/>
+    </g>
+    <g id="heart">
+      <path d="M32 56C8 40 6 22 17 15c6-3 12 0 15 6 3-6 9-9 15-6 11 7 9 25-15 41z" fill="currentColor" fill-opacity=".12"/>
+      <path d="M14 33h9l4-8 6 16 4-8h11"/>
+    </g>
+    <g id="stopwatch">
+      <circle cx="32" cy="37" r="20" fill="currentColor" fill-opacity=".1"/>
+      <path d="M26 5h12M32 5v12M50 16l4-4M32 37V25M32 37l9 6"/>
+    </g>
+    <g id="leaf">
+      <path d="M10 54C6 28 24 8 56 8c2 30-16 50-46 46z" fill="currentColor" fill-opacity=".12"/>
+      <path d="M10 54L40 24"/>
+    </g>
+    <g id="drop">
+      <path d="M32 6C21 22 12 31 12 41a20 20 0 0 0 40 0C52 31 43 22 32 6z" fill="currentColor" fill-opacity=".12"/>
+      <path d="M22 42a10 10 0 0 0 9 9"/>
+    </g>
+    <g id="tablets">
+      <circle cx="22" cy="24" r="14" fill="currentColor" fill-opacity=".12"/>
+      <path d="M12 34L32 14"/>
+      <circle cx="44" cy="44" r="11"/>
+      <path d="M36 44h16"/>
+    </g>
+    <g id="shoe">
+      <path d="M5 46V28l11 3 9-11 8 9 15 5c6 2 11 5 11 12z" fill="currentColor" fill-opacity=".12"/>
+      <path d="M5 52h54M25 20l5 8M33 29l4 6"/>
+    </g>
+  </defs>
+
+  <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".5">
+    <use href="#capsule"    transform="translate(36 40) rotate(-28 32 32) scale(1.15)"   style="color:#10b981"/>
+    <use href="#scale"      transform="translate(200 28) rotate(6 32 32) scale(1.15)"    style="color:#f59e0b"/>
+    <use href="#bike"       transform="translate(380 50) scale(1.2)"                     style="color:#38bdf8"/>
+    <use href="#dumbbell"   transform="translate(570 36) rotate(-18 32 32) scale(1.15)"  style="color:#8b5cf6"/>
+    <use href="#drop"       transform="translate(100 190) rotate(8 32 32) scale(1.1)"    style="color:#14b8a6"/>
+    <use href="#watch"      transform="translate(270 200) rotate(-8 32 32) scale(1.15)"  style="color:#fb7185"/>
+    <use href="#jar"        transform="translate(450 190) rotate(10 32 32) scale(1.15)"  style="color:#10b981"/>
+    <use href="#apple"      transform="translate(620 210) rotate(14 32 32) scale(1.1)"   style="color:#fb7185"/>
+    <use href="#stopwatch"  transform="translate(30 350) rotate(-6 32 32) scale(1.15)"   style="color:#8b5cf6"/>
+    <use href="#leaf"       transform="translate(190 370) rotate(-24 32 32) scale(1.1)"  style="color:#84cc16"/>
+    <use href="#bottle"     transform="translate(350 350) rotate(12 32 32) scale(1.15)"  style="color:#38bdf8"/>
+    <use href="#heart"      transform="translate(530 370) rotate(-10 32 32) scale(1.1)"  style="color:#fb7185"/>
+    <use href="#tablets"    transform="translate(630 480) scale(1.0)"                    style="color:#f59e0b"/>
+    <use href="#capsule"    transform="translate(60 520) rotate(32 32 32) scale(1.15)"   style="color:#14b8a6"/>
+    <use href="#shoe"       transform="translate(230 540) rotate(-5 32 32) scale(1.15)"  style="color:#8b5cf6"/>
+    <use href="#bike"       transform="translate(400 560) rotate(-4 32 32) scale(1.1)"   style="color:#10b981"/>
+    <use href="#leaf"       transform="translate(560 590) rotate(20 32 32) scale(1.0)"   style="color:#14b8a6"/>
+  </g>
+</svg>
