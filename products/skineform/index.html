@@ -232,6 +232,10 @@
                     <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+380..."
                            class="w-full rounded-xl border-2 border-emerald-200 bg-mint-50 px-4 py-3.5 text-base placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-emerald-100" />
                   </div>
+                  <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+                    <label for="website">Не заповнюйте це поле</label>
+                    <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+                  </div>
                   <label class="flex items-start gap-2 text-xs leading-snug text-slate-600">
                     <input id="consent" type="checkbox" required class="mt-0.5 h-4 w-4 rounded border-emerald-300 text-emerald-600 focus:ring-emerald-300" />
                     <span>Погоджуюсь на обробку персональних даних відповідно до <a href="../../privacy/" class="text-emerald-700 underline">політики конфіденційності</a>.</span>
@@ -428,12 +432,10 @@
   </footer>
 
   <script>
-    /* Відправка заявки в EnsoTraffic: чистий клієнтський JS (fetch), без PHP — підходить для GitHub Pages. */
+    /* Відправка заявки: форма шле дані на наш захищений сервер-посередник (Cloudflare Worker),
+       який додає секретний ключ і передає заявку партнеру EnsoTraffic. Ключ у коді сторінки відсутній. */
     (function () {
-      var API_URL = "https://ensotraffic.tech/api/wm/push.json?id=1343-5ff122e883e7e5ba683e86fc333e7f41";
-      var IP_URL  = "https://api.ipify.org?format=json";   // безкоштовний сервіс визначення IP клієнта
-      var OFFER   = 190;
-      var FLOW    = 1995;
+      var API_URL = "https://api.usefulhabit.review/lead";
       var THANK_YOU = "thank-you.html";
 
       var form = document.getElementById("lead-form");
@@ -446,32 +448,12 @@
         msg.className = "rounded-xl px-3 py-2.5 text-sm " + (ok ? "bg-emerald-50 text-emerald-800" : "bg-red-50 text-red-700");
       }
 
-      // IP клієнта: якщо сервіс недоступний — не блокуємо заявку, а відправляємо без IP.
-      function getIp() {
-        var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
-        var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 3000) : null;
-        return fetch(IP_URL, ctrl ? { signal: ctrl.signal } : {})
-          .then(function (r) { return r.json(); })
-          .then(function (d) { return (d && d.ip) || ""; })
-          .catch(function () { return ""; })
-          .finally(function () { if (timer) clearTimeout(timer); });
-      }
-
       // +380XXXXXXXXX | 380XXXXXXXXX | 0XXXXXXXXX  ->  +380XXXXXXXXX
       function normalizePhone(raw) {
         var d = String(raw).replace(/\D/g, "");
         if (/^380\d{9}$/.test(d)) return "+" + d;
         if (/^0\d{9}$/.test(d))   return "+38" + d;
         return null;
-      }
-
-      // Текст помилки з відповіді API (щоб ліди не губилися мовчки)
-      function apiError(data, status) {
-        if (data) {
-          var e = data.message || data.error || data.errors || data.status;
-          if (e) return typeof e === "string" ? e : JSON.stringify(e);
-        }
-        return "HTTP " + status;
       }
 
       form.addEventListener("submit", function (e) {
@@ -484,28 +466,20 @@
 
         btn.disabled = true; btn.textContent = "Надсилаємо…"; msg.className = "hidden";
 
-        getIp().then(function (ip) {
-          return fetch(API_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              offer: OFFER,
-              flow: FLOW,
-              name: name,
-              phone: phone,
-              ip: ip,
-              ua: navigator.userAgent
-            })
-          });
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: name, phone: phone, website: form.elements["website"].value })
         }).then(function (r) {
           return r.text().then(function (txt) {
             var data = null;
             try { data = JSON.parse(txt); } catch (err) {}
+            if (window.console) console.log("Lead response:", r.status, data);
             if (data && data.status === "ok") {
               window.location.href = THANK_YOU;
               return;
             }
-            show("Не вдалося надіслати заявку: " + apiError(data, r.status) + ". Спробуйте ще раз.", false);
+            show("Не вдалося надіслати заявку: " + ((data && data.message) || ("HTTP " + r.status)) + ". Спробуйте ще раз.", false);
           });
         }).catch(function (err) {
           if (window.console) console.error("Lead submit failed:", err);
