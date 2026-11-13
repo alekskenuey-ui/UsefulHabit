@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сторінку не знайдено | Useful Habit</title>
+    <meta name="description" content="Такої сторінки немає. Поверніться на головну або оберіть розділ журналу Useful Habit.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#164225">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/site-header.css">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="has-fixed-header bg-[#FBFDFB] text-[#1C2B1F] antialiased min-h-screen flex flex-col">
+    <!-- HEADER (єдиний для всього сайту) -->
+    <header class="site-header" id="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo-link" aria-label="Useful Habit — на головну">
+                    <img src="/logo.png" alt="Useful Habit" class="logo-img" id="logo-img"
+                         onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block'" />
+                    <span class="logo-text" id="logo-fallback" style="display:none"><strong>Useful</strong> Habit</span>
+                </a>
+                <nav class="main-nav" aria-label="Головне меню">
+                    <a href="/">Головна</a>
+                    <a href="/active-life/">Активне життя</a>
+                    <a href="/metabolism/">Тонус та обмін речовин</a>
+                    <a href="/beauty/">Краса та молодість</a>
+                    <a href="/about/" class="nav-cta">Про нас</a>
+                </nav>
+                <button class="burger" aria-label="Відкрити меню" aria-expanded="false" id="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Мобільне меню">
+            <div class="container">
+                <a href="/">Головна</a>
+                <a href="/active-life/">Активне життя</a>
+                <a href="/metabolism/">Тонус та обмін речовин</a>
+                <a href="/beauty/">Краса та молодість</a>
+                <a href="/about/">Про нас</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1 flex items-center justify-center px-4 py-16">
+        <section class="max-w-lg text-center">
+            <p class="text-7xl font-bold text-[#10B981] mb-4">404</p>
+            <h1 class="text-2xl sm:text-3xl font-bold text-[#164225] mb-3">Сторінку не знайдено</h1>
+            <p class="text-[#4A5D4E] mb-8">Можливо, адресу введено з помилкою або матеріал було переміщено. Поверніться на головну або оберіть розділ журналу.</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="/" class="bg-[#164225] text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-[#10B981] transition">На головну</a>
+                <a href="/products/" class="bg-[#E8F5EC] text-[#164225] text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-[#CDE7D5] transition">Огляди нутрицевтиків</a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#164225] text-[#A7BDB0] text-sm py-6 text-center">
+        <p>© 2026 Useful Habit. Всі права захищено. <a href="/privacy/" class="underline hover:text-[#10B981]">Політика конфіденційності</a> · <a href="/disclaimer/" class="underline hover:text-[#10B981]">Відмова від відповідальності</a></p>
+    </footer>
+    <script src="/assets/site-header.js" defer></script>
+</body>
+</html>
