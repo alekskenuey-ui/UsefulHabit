@@ -197,34 +197,26 @@
             <a href="../../metabolism/" class="text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-600">Що наука каже про ці інгредієнти</a>
           </div>
 
-          <!-- Фото продукту -->
-          <figure class="mt-7 overflow-hidden rounded-3xl bg-mint-100 shadow-xl shadow-emerald-900/10 ring-1 ring-emerald-100">
+          <!-- Фото продукту з «наліпками»-фактами (на планшеті/десктопі — поверх фото, на мобільному — під фото) -->
+          <figure class="relative mt-7 overflow-hidden rounded-3xl bg-mint-100 shadow-xl shadow-emerald-900/10 ring-1 ring-emerald-100">
             <img src="../../assets/skineform-review.webp"
                  srcset="../../assets/skineform-review-640.webp 640w, ../../assets/skineform-review.webp 1200w"
                  sizes="(max-width: 1024px) 100vw, 720px"
                  alt="Упаковка Skineform на кам'яному подіумі серед інгредієнтів формули: зелений чай, виноград, гарцинія, артишок, ананас, імбир і куркума"
                  width="1200" height="896" fetchpriority="high" decoding="async" class="h-auto w-full" />
+            <ul class="absolute inset-x-3 top-3 hidden grid-cols-4 gap-2 sm:grid xl:inset-x-4 xl:top-4 xl:gap-3" aria-label="Коротко про продукт">
+              <li class="-rotate-2 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">🍃</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">7 рослинних компонентів</span></li>
+              <li class="rotate-1 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">💊</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">20 капсул × 400 мг</span></li>
+              <li class="-rotate-1 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">🕐</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">1–2 капсули на день</span></li>
+              <li class="rotate-2 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">💬</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">Безкоштовна консультація</span></li>
+            </ul>
           </figure>
-
-          <!-- Факти про продукт -->
-          <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-            <div class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm">
-              <span class="text-3xl" aria-hidden="true">🍃</span>
-              <span class="text-sm font-bold leading-snug text-forest-800">7 рослинних компонентів</span>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm">
-              <span class="text-3xl" aria-hidden="true">💊</span>
-              <span class="text-sm font-bold leading-snug text-forest-800">20 капсул × 400 мг</span>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm">
-              <span class="text-3xl" aria-hidden="true">🕐</span>
-              <span class="text-sm font-bold leading-snug text-forest-800">1–2 капсули на день</span>
-            </div>
-            <div class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm">
-              <span class="text-3xl" aria-hidden="true">💬</span>
-              <span class="text-sm font-bold leading-snug text-forest-800">Безкоштовна консультація</span>
-            </div>
-          </div>
+          <ul class="mt-4 grid grid-cols-2 gap-3 sm:hidden" aria-label="Коротко про продукт">
+            <li class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm"><span class="text-3xl" aria-hidden="true">🍃</span><span class="text-sm font-bold leading-snug text-forest-800">7 рослинних компонентів</span></li>
+            <li class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm"><span class="text-3xl" aria-hidden="true">💊</span><span class="text-sm font-bold leading-snug text-forest-800">20 капсул × 400 мг</span></li>
+            <li class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm"><span class="text-3xl" aria-hidden="true">🕐</span><span class="text-sm font-bold leading-snug text-forest-800">1–2 капсули на день</span></li>
+            <li class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm"><span class="text-3xl" aria-hidden="true">💬</span><span class="text-sm font-bold leading-snug text-forest-800">Безкоштовна консультація</span></li>
+          </ul>
         </div>
 
         <!-- RIGHT 40%: форма -->
