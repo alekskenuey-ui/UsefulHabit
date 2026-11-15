@@ -1,0 +1,59 @@
+/* Useful Habit — social links (Facebook, Telegram) used in the footer of every page.
+   Self-contained: does not depend on Tailwind or page-level styles. */
+.uh-social {
+  margin-top: 1.25rem;
+}
+.uh-social__title {
+  display: block;
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+.uh-social__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.uh-social__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem 0.4rem 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.uh-social__link:hover,
+.uh-social__link:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+.uh-social__link:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+.uh-social__icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+}
+.uh-social--center {
+  margin-top: 0.9rem;
+}
+.uh-social--center .uh-social__list {
+  justify-content: center;
+}
