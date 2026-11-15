@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="720" viewBox="0 0 720 720">
-  <!-- Тематичний фон Useful Habit: капсули, баночка, ваги, трекер, велосипед, фітнес, вода, фрукти. Тайл безшовний. -->
+  <!-- Тематичний фон Useful Habit: капсули, баночка, листя, трекер, велосипед, фітнес, вода, фрукти. Тайл безшовний. -->
   <defs>
     <g id="capsule">
       <rect x="4" y="22" width="56" height="20" rx="10"/>
@@ -73,7 +73,7 @@
 
   <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".5">
     <use href="#capsule"    transform="translate(36 40) rotate(-28 32 32) scale(1.15)"   style="color:#10b981"/>
-    <use href="#scale"      transform="translate(200 28) rotate(6 32 32) scale(1.15)"    style="color:#f59e0b"/>
+    <use href="#leaf"       transform="translate(200 28) rotate(6 32 32) scale(1.15)"    style="color:#10b981"/>
     <use href="#bike"       transform="translate(380 50) scale(1.2)"                     style="color:#38bdf8"/>
     <use href="#dumbbell"   transform="translate(570 36) rotate(-18 32 32) scale(1.15)"  style="color:#8b5cf6"/>
     <use href="#drop"       transform="translate(100 190) rotate(8 32 32) scale(1.1)"    style="color:#14b8a6"/>
