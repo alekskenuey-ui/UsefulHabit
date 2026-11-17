@@ -100,7 +100,12 @@
 
       <h1 id="ty-title" class="mt-7 font-serif text-3xl font-bold text-forest-900 sm:text-4xl">Дякуємо!</h1>
       <p class="mt-4 text-lg font-semibold leading-snug text-forest-800">Вашу заявку успішно прийнято.</p>
-      <p class="mt-2 text-base leading-relaxed text-slate-600">Менеджер зв'яжеться з вами протягом 10-15 хвилин.</p>
+      <p id="ty-when" class="mt-2 text-base leading-relaxed text-slate-600">Менеджер зв'яжеться з вами протягом 10–15 хвилин.</p>
+      <p id="ty-later" class="mt-4 hidden rounded-2xl border-2 border-amber-300 bg-amber-50 px-4 py-3 text-base font-extrabold leading-snug text-amber-900"></p>
+      <p class="mt-4 inline-flex items-center gap-2 rounded-full bg-mint-100 px-4 py-2 text-sm font-semibold text-forest-800">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Консультанти працюють щодня з 9:00 до 22:00 (за Києвом)
+      </p>
 
       <div class="mt-8 rounded-2xl bg-mint-100 px-5 py-4 text-left text-sm leading-relaxed text-slate-600">
         <p class="font-semibold text-forest-800">Щоб менеджер зміг швидко до вас додзвонитися:</p>
@@ -138,6 +143,25 @@
       <p class="mt-4 text-xs text-white/35">© 2026 Useful Habit. Всі права захищено.</p>
     </div>
   </footer>
+  <script>
+    /* Якщо заявка прийшла в неробочий час колл-центру (після 21:45 або до 9:00 за Києвом) —
+       чесно кажемо, коли саме зателефонують. */
+    (function () {
+      try {
+        var p = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Kyiv", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date());
+        var h = +p.find(function (x) { return x.type === "hour"; }).value;
+        var m = +p.find(function (x) { return x.type === "minute"; }).value;
+        var mins = h * 60 + m, text = "";
+        if (mins >= 21 * 60 + 45) text = "Заявка надійшла після завершення робочого дня — консультант зателефонує вам завтра після 9:00.";
+        else if (mins < 9 * 60)   text = "Консультанти ще не почали роботу — вам зателефонують сьогодні після 9:00.";
+        if (text) {
+          var later = document.getElementById("ty-later");
+          later.textContent = text; later.classList.remove("hidden");
+          document.getElementById("ty-when").classList.add("hidden");
+        }
+      } catch (e) {}
+    })();
+  </script>
   <script src="../../assets/site-header.js" defer></script>
 </body>
 </html>
