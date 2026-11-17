@@ -116,6 +116,24 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/social.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1695404558601030');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {content_name: 'Skineform', content_category: 'Огляд'});
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1695404558601030&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
 <body class="has-fixed-header font-sans text-slate-700 antialiased">
@@ -538,9 +556,19 @@
       var API_URL = "https://api.usefulhabit.review/lead";
       var THANK_YOU = "thank-you.html";
 
+      function cookie(n) { var m = document.cookie.match("(?:^|; )" + n + "=([^;]*)"); return m ? decodeURIComponent(m[1]) : ""; }
+      // _fbc: з cookie або з fbclid у посиланні з реклами
+      function fbc() {
+        var c = cookie("_fbc"); if (c) return c;
+        var id = new URLSearchParams(location.search).get("fbclid");
+        return id ? "fb.1." + Date.now() + "." + id : "";
+      }
+
       // +380XXXXXXXXX | 380XXXXXXXXX | 0XXXXXXXXX  ->  +380XXXXXXXXX
       function normalizePhone(raw) {
         var d = String(raw).replace(/\D/g, "");
+        if (/^380380\d{9}$/.test(d)) d = d.slice(3);              // вставили повний номер поверх автопрефікса +380
+        if (/^3800\d{9}$/.test(d))   d = "380" + d.slice(4);      // +380 + 0XXXXXXXXX
         if (/^380\d{9}$/.test(d)) return "+" + d;
         if (/^0\d{9}$/.test(d))   return "+38" + d;
         return null;
@@ -570,18 +598,23 @@
           if (!phone)          { form.elements["phone"].focus(); return show("Введіть номер у форматі +380XXXXXXXXX.", false); }
 
           btn.disabled = true; btn.textContent = "Надсилаємо…"; msg.className = "js-msg hidden";
+          var eventId = "lead-" + Date.now() + "-" + Math.random().toString(36).slice(2, 10);
 
           fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name: name, phone: phone, website: form.elements["website"].value })
+            // TODO(CAPI): коли Worker вмітиме слати події в Conversions API, додати сюди
+            // event_id: eventId, fbp: cookie("_fbp"), fbc: fbc(), page_url: location.href
           }).then(function (r) {
             return r.text().then(function (txt) {
               var data = null;
               try { data = JSON.parse(txt); } catch (err) {}
               if (window.console) console.log("Lead response:", r.status, data);
               if (data && data.status === "ok") {
-                window.location.href = THANK_YOU;
+                // Подія Lead лише після успішно прийнятої заявки; той самий event_id піде з сервера (CAPI) для дедуплікації
+                if (window.fbq) fbq("track", "Lead", { content_name: "Skineform" }, { eventID: eventId });
+                setTimeout(function () { window.location.href = THANK_YOU; }, 400);
                 return;
               }
               show("Не вдалося надіслати заявку: " + ((data && data.message) || ("HTTP " + r.status)) + ". Спробуйте ще раз.", false);
