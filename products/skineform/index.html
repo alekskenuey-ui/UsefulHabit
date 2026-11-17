@@ -603,9 +603,8 @@
           fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name: name, phone: phone, website: form.elements["website"].value })
-            // TODO(CAPI): коли Worker вмітиме слати події в Conversions API, додати сюди
-            // event_id: eventId, fbp: cookie("_fbp"), fbc: fbc(), page_url: location.href
+            body: JSON.stringify({ name: name, phone: phone, website: form.elements["website"].value,
+                                   event_id: eventId, fbp: cookie("_fbp"), fbc: fbc(), page_url: location.href })
           }).then(function (r) {
             return r.text().then(function (txt) {
               var data = null;
