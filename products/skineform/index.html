@@ -182,7 +182,7 @@
       <p class="mb-6 inline-flex items-start gap-2 rounded-2xl border border-emerald-200 bg-white/90 px-4 py-2 text-xs leading-relaxed text-slate-600 sm:items-center sm:rounded-full" role="note">
         <span class="text-amber-500" aria-hidden="true">ℹ</span>
         <span><strong class="text-forest-800">Рекламний матеріал.</strong>
-        Ця сторінка є комерційною: ми приймаємо заявки на продукт і передаємо їх представнику бренду. Useful Habit може отримувати винагороду за оформлені замовлення.</span>
+        Ми передаємо заявки представнику бренду й можемо отримувати винагороду за оформлені замовлення.</span>
       </p>
 
       <nav aria-label="Хлібні крихти" class="mb-5 text-xs text-slate-500">
@@ -193,18 +193,35 @@
         <span>Skineform</span>
       </nav>
 
-      <div class="grid items-start gap-10 lg:grid-cols-[3fr_2fr] lg:gap-14">
+      <div class="grid items-start gap-8 lg:grid-cols-[3fr_2fr] lg:gap-x-14 lg:gap-y-8">
 
-        <!-- LEFT 60% -->
-        <div>
+        <!-- A: заголовок + оферта (на мобільному — першим) -->
+        <div class="order-1 lg:order-none lg:col-start-1 lg:row-start-1">
           <span class="mb-4 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-700">Огляд нутрицевтика</span>
           <h1 id="hero-title" class="font-serif text-3xl font-bold leading-tight text-forest-900 sm:text-4xl lg:text-5xl lg:leading-[1.12]">
             Skineform: рослинна формула із 10 компонентів
           </h1>
-          <p class="mt-5 text-lg leading-relaxed text-slate-600">
-            Рослинний комплекс у капсулах для тих, хто дбає про збалансоване харчування та активний ритм життя.
-            Ми розібрали склад, правила прийому й застереження — щоб ви могли ухвалити зважене рішення.
+          <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+            Рослинний комплекс у капсулах. Ми розібрали склад, правила прийому й застереження — щоб ви могли ухвалити зважене рішення.
           </p>
+
+          <!-- Оферта -->
+          <ul class="mt-5 grid gap-2.5 sm:grid-cols-3" aria-label="Умови замовлення">
+            <li class="flex items-center gap-2.5 rounded-2xl border-2 border-amber-300 bg-amber-50 px-3.5 py-3 text-sm font-bold leading-snug text-amber-900"><span class="text-2xl" aria-hidden="true">🎁</span><span>Акція: 2 упаковки в подарунок при замовленні курсу*</span></li>
+            <li class="flex items-center gap-2.5 rounded-2xl border border-emerald-200 bg-white px-3.5 py-3 text-sm font-bold leading-snug text-forest-800"><span class="text-2xl" aria-hidden="true">💵</span><span>Оплата при отриманні</span></li>
+            <li class="flex items-center gap-2.5 rounded-2xl border border-emerald-200 bg-white px-3.5 py-3 text-sm font-bold leading-snug text-forest-800"><span class="text-2xl" aria-hidden="true">📦</span><span>Доставка Новою Поштою по Україні</span></li>
+          </ul>
+
+          <!-- Кому підходить -->
+          <div class="mt-5 rounded-2xl bg-white/90 px-4 py-4 ring-1 ring-emerald-100 sm:px-5">
+            <p class="text-xs font-bold uppercase tracking-widest text-emerald-700">Кому підходить</p>
+            <ul class="mt-2 space-y-1.5 text-sm leading-snug text-slate-700 sm:text-base">
+              <li class="flex gap-2"><span class="text-emerald-600" aria-hidden="true">✓</span>Дорослим, які хочуть доповнити раціон рослинними компонентами</li>
+              <li class="flex gap-2"><span class="text-emerald-600" aria-hidden="true">✓</span>Тим, хто дбає про комфорт травлення й відчуття легкості</li>
+              <li class="flex gap-2"><span class="text-emerald-600" aria-hidden="true">✓</span>Тим, хто прагне більше руху й енергії в щоденному ритмі</li>
+            </ul>
+          </div>
+          <p class="mt-2 text-[11px] leading-snug text-slate-500">*Умови акції та актуальну ціну назве консультант під час дзвінка.</p>
 
           <!-- Редакційна позначка -->
           <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500">
@@ -215,6 +232,10 @@
             <a href="../../metabolism/" class="text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-600">Що наука каже про ці інгредієнти</a>
           </div>
 
+        </div>
+
+        <!-- C: фото (на мобільному — після форми) -->
+        <div class="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
           <!-- Фото продукту з «наліпками»-фактами (на планшеті/десктопі — поверх фото, на мобільному — під фото) -->
           <figure class="relative mt-7 overflow-hidden rounded-3xl bg-mint-100 shadow-xl shadow-emerald-900/10 ring-1 ring-emerald-100">
             <img src="../../assets/skineform-review.webp"
@@ -238,7 +259,7 @@
         </div>
 
         <!-- RIGHT 40%: форма -->
-        <aside aria-label="Запит на ціну та консультацію" class="pt-10">
+        <aside aria-label="Запит на ціну та консультацію" class="order-2 pt-10 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <div id="request" class="scroll-mt-28 lg:sticky lg:top-28">
             <div class="relative rounded-[28px] border-[3px] border-emerald-500 bg-white shadow-2xl shadow-emerald-900/25 ring-8 ring-emerald-200/60">
 
@@ -248,7 +269,7 @@
               </div>
 
               <div class="rounded-t-[24px] bg-gradient-to-br from-emerald-600 to-forest-700 px-6 pb-6 pt-14 text-center text-white">
-                <h2 class="text-xl font-extrabold uppercase leading-tight tracking-wide sm:text-2xl">Дізнайтеся ціну та отримайте консультацію</h2>
+                <h2 class="text-xl font-extrabold uppercase leading-tight tracking-wide sm:text-2xl">Дізнайтеся ціну та умови акції</h2>
                 <p class="mt-2 text-sm leading-relaxed text-emerald-50">
                   Залиште заявку — представник бренду зв'яжеться з вами у робочий час, зазвичай протягом 10–15 хвилин.
                 </p>
@@ -263,7 +284,7 @@
                   </div>
                   <div>
                     <label for="phone" class="mb-1 block text-xs font-bold uppercase tracking-wide text-forest-800">Номер телефону</label>
-                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+380 XX XXX XX XX"
+                    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__"
                            class="js-phone w-full rounded-xl border-2 border-emerald-200 bg-mint-50 px-4 py-3.5 text-base placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-emerald-100" />
                   </div>
                   <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
@@ -272,7 +293,7 @@
                   </div>
                   <button type="submit"
                           class="js-submit w-full rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-4 py-4 text-sm font-extrabold uppercase leading-snug tracking-wide text-white shadow-lg shadow-emerald-600/40 transition hover:from-emerald-600 hover:to-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200 disabled:cursor-wait disabled:opacity-70 sm:text-base">
-                    Дізнатися ціну
+                    Дізнатися ціну й акцію
                   </button>
                   <p class="text-center text-[11px] leading-snug text-slate-500">Натискаючи кнопку, ви погоджуєтесь на обробку персональних даних і передачу заявки представнику бренду відповідно до <a href="../../privacy/" class="underline">політики конфіденційності</a>.</p>
                   <p class="js-msg hidden rounded-xl px-3 py-2.5 text-sm" role="alert" aria-live="assertive"></p>
@@ -451,7 +472,7 @@
             <input id="name-2" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Ваше ім'я"
                    class="w-full rounded-xl border-2 border-emerald-200 bg-mint-50 px-4 py-3.5 text-base placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-emerald-100" />
             <label for="phone-2" class="sr-only">Номер телефону</label>
-            <input id="phone-2" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+380 XX XXX XX XX"
+            <input id="phone-2" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__"
                    class="js-phone w-full rounded-xl border-2 border-emerald-200 bg-mint-50 px-4 py-3.5 text-base placeholder-slate-400 focus:border-emerald-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-emerald-100" />
             <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
               <input name="website" type="text" tabindex="-1" autocomplete="off" />
@@ -575,10 +596,35 @@
         return null;
       }
 
-      // Підставляємо +380 при фокусі, щоб людині не набирати код країни
+      // Маска телефону: +38 (0XX) XXX-XX-XX (обов'язкова за умовами оффера)
+      var PREFIX = "+38 (0";
+      function phoneDigits(v) {            // 9 цифр після «+38 0»
+        var d = String(v).replace(/\D/g, "");
+        if (d.indexOf("380") === 0) d = d.slice(3);
+        else if (d.indexOf("38") === 0) d = d.slice(2);
+        if (d.indexOf("380") === 0 && d.length > 9) d = d.slice(3);   // вставили повний номер поверх префікса
+        d = d.replace(/^0+/, "");                                       // код оператора не починається з 0
+        if (d.indexOf("38") === 0) d = d.slice(2).replace(/^0+/, "");   // набирають «380…» вручну: коду «38» не існує
+        return d.slice(0, 9);
+      }
+      function formatPhone(d) {
+        var out = PREFIX + d.slice(0, 2);
+        if (d.length > 2) out += ") " + d.slice(2, 5);
+        if (d.length > 5) out += "-" + d.slice(5, 7);
+        if (d.length > 7) out += "-" + d.slice(7, 9);
+        return out;
+      }
       Array.prototype.forEach.call(document.querySelectorAll(".js-phone"), function (el) {
-        el.addEventListener("focus", function () { if (!el.value) el.value = "+380"; });
-        el.addEventListener("blur",  function () { if (el.value === "+380") el.value = ""; });
+        el.setAttribute("maxlength", "19");
+        el.addEventListener("focus", function () { if (!el.value) el.value = PREFIX; });
+        el.addEventListener("blur",  function () { if (phoneDigits(el.value).length === 0) el.value = ""; });
+        el.addEventListener("keydown", function (e) {
+          if (e.key === "Backspace" && el.selectionStart === el.value.length && el.selectionEnd === el.value.length) {
+            e.preventDefault();
+            var d = phoneDigits(el.value); el.value = formatPhone(d.slice(0, -1));
+          }
+        });
+        el.addEventListener("input", function () { el.value = formatPhone(phoneDigits(el.value)); });
       });
 
       Array.prototype.forEach.call(document.querySelectorAll("form.lead-form"), function (form) {
@@ -596,7 +642,7 @@
           var name  = form.elements["name"].value.trim();
           var phone = normalizePhone(form.elements["phone"].value);
           if (name.length < 2) { form.elements["name"].focus(); return show("Вкажіть, будь ласка, ваше ім'я.", false); }
-          if (!phone)          { form.elements["phone"].focus(); return show("Введіть номер у форматі +380XXXXXXXXX.", false); }
+          if (!phone)          { form.elements["phone"].focus(); return show("Введіть номер повністю: +38 (0XX) XXX-XX-XX.", false); }
 
           btn.disabled = true; btn.textContent = "Надсилаємо…"; msg.className = "js-msg hidden";
           var eventId = "lead-" + Date.now() + "-" + Math.random().toString(36).slice(2, 10);
