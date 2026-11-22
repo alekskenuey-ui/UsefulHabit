@@ -176,16 +176,16 @@
        HERO — зліва 60% (заголовок, фото, факти), справа 40% (форма)
        ============================================================ -->
   <section class="bg-gradient-to-b from-white/70 via-mint-100/60 to-transparent" aria-labelledby="hero-title">
-    <div class="mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 lg:pb-20 lg:pt-14">
+    <div class="mx-auto max-w-7xl px-4 pb-14 pt-4 sm:px-6 sm:pt-10 lg:pb-20 lg:pt-14">
 
       <!-- Комерційна плашка -->
-      <p class="mb-6 inline-flex items-start gap-2 rounded-2xl border border-emerald-200 bg-white/90 px-4 py-2 text-xs leading-relaxed text-slate-600 sm:items-center sm:rounded-full" role="note">
+      <p class="mb-4 inline-flex items-start gap-2 rounded-2xl border border-emerald-200 bg-white/90 px-3 py-1.5 text-[11px] sm:mb-6 sm:px-4 sm:py-2 sm:text-xs leading-relaxed text-slate-600 sm:items-center sm:rounded-full" role="note">
         <span class="text-amber-500" aria-hidden="true">ℹ</span>
         <span><strong class="text-forest-800">Рекламний матеріал.</strong>
         Ми передаємо заявки представнику бренду й можемо отримувати винагороду за оформлені замовлення.</span>
       </p>
 
-      <nav aria-label="Хлібні крихти" class="mb-5 text-xs text-slate-500">
+      <nav aria-label="Хлібні крихти" class="mb-5 hidden text-xs sm:block text-slate-500">
         <a href="../../" class="hover:text-emerald-600">Головна</a>
         <span aria-hidden="true" class="mx-1.5">›</span>
         <a href="../" class="hover:text-emerald-600">Огляди</a>
@@ -205,12 +205,37 @@
             Перекуси на бігу, щільні обіди, пізні вечері, а попереду ще свята? Skineform — дієтична добавка з <strong class="text-forest-800">гарцинією, артишоком, ацеролою та травами</strong>, яку приймають як доповнення до раціону тим, хто <strong class="text-forest-800">стежить за вагою</strong> й хоче більше легкості та енергії щодня.
           </p>
 
+          <!-- Фото (мобільний/планшет — одразу під заголовком) -->
+          <div class="mt-5 lg:hidden">
+          <figure class="relative overflow-hidden rounded-3xl bg-mint-100 shadow-xl shadow-emerald-900/10 ring-1 ring-emerald-100">
+            <img src="../../assets/skineform-review.webp"
+                 srcset="../../assets/skineform-review-640.webp 640w, ../../assets/skineform-review.webp 1200w"
+                 sizes="(max-width: 1024px) 100vw, 720px"
+                 alt="Упаковка Skineform на кам'яному подіумі серед рослинних інгредієнтів"
+                 width="1200" height="896" fetchpriority="high" decoding="async" class="h-auto w-full" />
+            <ul class="absolute inset-x-3 top-3 hidden grid-cols-4 gap-2 sm:grid xl:inset-x-4 xl:top-4 xl:gap-3" aria-label="Коротко про продукт">
+              <li class="-rotate-2 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">🍃</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">10 рослинних компонентів</span></li>
+              <li class="rotate-1 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">💊</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">20 капсул × 400 мг</span></li>
+              <li class="-rotate-1 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">🕐</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">1–2 капсули на день</span></li>
+              <li class="rotate-2 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">💬</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">Безкоштовна консультація</span></li>
+            </ul>
+          </figure>
+          <ul class="mt-3 grid grid-cols-2 gap-2 sm:hidden" aria-label="Коротко про продукт">
+            <li class="flex items-center gap-2 rounded-xl border border-emerald-100 bg-white/90 px-2.5 py-2.5 shadow-sm"><span class="text-xl" aria-hidden="true">🍃</span><span class="text-xs font-bold leading-tight text-forest-800">10 рослинних компонентів</span></li>
+            <li class="flex items-center gap-2 rounded-xl border border-emerald-100 bg-white/90 px-2.5 py-2.5 shadow-sm"><span class="text-xl" aria-hidden="true">💊</span><span class="text-xs font-bold leading-tight text-forest-800">20 капсул × 400 мг</span></li>
+            <li class="flex items-center gap-2 rounded-xl border border-emerald-100 bg-white/90 px-2.5 py-2.5 shadow-sm"><span class="text-xl" aria-hidden="true">🕐</span><span class="text-xs font-bold leading-tight text-forest-800">1–2 капсули на день</span></li>
+            <li class="flex items-center gap-2 rounded-xl border border-emerald-100 bg-white/90 px-2.5 py-2.5 shadow-sm"><span class="text-xl" aria-hidden="true">💬</span><span class="text-xs font-bold leading-tight text-forest-800">Безкоштовна консультація</span></li>
+          </ul>
+          </div>
+
+
           <!-- Оферта -->
           <ul class="mt-5 grid gap-2.5 sm:grid-cols-3" aria-label="Умови замовлення">
             <li class="flex items-center gap-2.5 rounded-2xl border-2 border-amber-300 bg-amber-50 px-3.5 py-3 text-sm font-bold leading-snug text-amber-900"><span class="text-2xl" aria-hidden="true">🎁</span><span>Акція: 2 упаковки в подарунок*</span></li>
             <li class="flex items-center gap-2.5 rounded-2xl border border-emerald-200 bg-white px-3.5 py-3 text-sm font-bold leading-snug text-forest-800"><span class="text-2xl" aria-hidden="true">💵</span><span>Оплата при отриманні</span></li>
             <li class="flex items-center gap-2.5 rounded-2xl border border-emerald-200 bg-white px-3.5 py-3 text-sm font-bold leading-snug text-forest-800"><span class="text-2xl" aria-hidden="true">📦</span><span>Доставка Новою Поштою по Україні</span></li>
           </ul>
+          <a href="#request" class="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-4 py-4 text-center text-base font-extrabold uppercase tracking-wide text-white shadow-lg shadow-emerald-600/40 animate-[pulse_2.5s_ease-in-out_infinite] lg:hidden">Отримати 2 упаковки в подарунок* <span aria-hidden="true">→</span></a>
 
           <!-- Кому підходить -->
           <div class="mt-5 rounded-2xl bg-white/90 px-4 py-4 ring-1 ring-emerald-100 sm:px-5">
@@ -232,30 +257,6 @@
             <a href="../../metabolism/" class="text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-600">Що наука каже про ці інгредієнти</a>
           </div>
 
-        </div>
-
-        <!-- C: фото (на мобільному — після форми) -->
-        <div class="order-3 lg:order-none lg:col-start-1 lg:row-start-2">
-          <!-- Фото продукту з «наліпками»-фактами (на планшеті/десктопі — поверх фото, на мобільному — під фото) -->
-          <figure class="relative mt-7 overflow-hidden rounded-3xl bg-mint-100 shadow-xl shadow-emerald-900/10 ring-1 ring-emerald-100">
-            <img src="../../assets/skineform-review.webp"
-                 srcset="../../assets/skineform-review-640.webp 640w, ../../assets/skineform-review.webp 1200w"
-                 sizes="(max-width: 1024px) 100vw, 720px"
-                 alt="Упаковка Skineform на кам'яному подіумі серед рослинних інгредієнтів"
-                 width="1200" height="896" fetchpriority="high" decoding="async" class="h-auto w-full" />
-            <ul class="absolute inset-x-3 top-3 hidden grid-cols-4 gap-2 sm:grid xl:inset-x-4 xl:top-4 xl:gap-3" aria-label="Коротко про продукт">
-              <li class="-rotate-2 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">🍃</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">10 рослинних компонентів</span></li>
-              <li class="rotate-1 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">💊</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">20 капсул × 400 мг</span></li>
-              <li class="-rotate-1 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">🕐</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">1–2 капсули на день</span></li>
-              <li class="rotate-2 flex flex-col items-center gap-1 rounded-2xl border border-white/80 bg-white/80 px-2 py-2 text-center shadow-lg sm:flex-row sm:gap-2 sm:px-3 sm:py-2.5 sm:text-left lg:flex-col lg:gap-1 lg:px-2 lg:py-2 lg:text-center xl:flex-row xl:gap-2 xl:px-3 xl:py-2.5 xl:text-left shadow-emerald-900/10 ring-1 ring-emerald-100 backdrop-blur-md transition hover:rotate-0 hover:scale-105"><span class="text-xl leading-none xl:text-2xl" aria-hidden="true">💬</span><span class="text-[12px] font-bold leading-tight text-forest-800 xl:text-[13px]">Безкоштовна консультація</span></li>
-            </ul>
-          </figure>
-          <ul class="mt-4 grid grid-cols-2 gap-3 sm:hidden" aria-label="Коротко про продукт">
-            <li class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm"><span class="text-3xl" aria-hidden="true">🍃</span><span class="text-sm font-bold leading-snug text-forest-800">10 рослинних компонентів</span></li>
-            <li class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm"><span class="text-3xl" aria-hidden="true">💊</span><span class="text-sm font-bold leading-snug text-forest-800">20 капсул × 400 мг</span></li>
-            <li class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm"><span class="text-3xl" aria-hidden="true">🕐</span><span class="text-sm font-bold leading-snug text-forest-800">1–2 капсули на день</span></li>
-            <li class="flex flex-col items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-white/90 px-3 py-5 text-center shadow-sm"><span class="text-3xl" aria-hidden="true">💬</span><span class="text-sm font-bold leading-snug text-forest-800">Безкоштовна консультація</span></li>
-          </ul>
         </div>
 
         <!-- RIGHT 40%: форма -->
@@ -321,32 +322,50 @@
     <div class="mx-auto max-w-7xl space-y-12 px-4 pb-28 pt-6 sm:px-6 lg:space-y-16 lg:pb-20">
 
       <!-- ДЛЯ ЧОГО — картки переваг -->
-      <section aria-labelledby="tasks">
-        <h2 id="tasks" class="text-center font-serif text-2xl font-bold text-forest-900 sm:text-3xl">Для чого приймають Skineform</h2>
-        <p class="mx-auto mt-2 max-w-2xl text-center text-slate-600">Рослинна підтримка для тих, хто стежить за вагою, — без жорстких дієт і складних правил.</p>
-        <div class="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-3xl bg-gradient-to-br from-emerald-600 to-forest-800 p-6 text-white shadow-xl shadow-emerald-900/20">
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 text-2xl" aria-hidden="true">⚖️</div>
-            <h3 class="mt-4 text-lg font-extrabold leading-snug">Контроль ваги</h3>
-            <p class="mt-2 text-sm leading-relaxed text-white/90"><strong class="text-white">Гарцинію</strong> традиційно додають до раціону тих, хто стежить за вагою, — як доповнення до харчування й руху.</p>
+      <section aria-labelledby="tasks" class="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+        <!-- Фото продукту (десктоп) -->
+        <div class="hidden lg:block">
+          <figure class="relative overflow-hidden rounded-3xl bg-mint-100 shadow-xl shadow-emerald-900/10 ring-1 ring-emerald-100">
+            <img src="../../assets/skineform-review.webp"
+                 srcset="../../assets/skineform-review-640.webp 640w, ../../assets/skineform-review.webp 1200w"
+                 sizes="(max-width: 1024px) 100vw, 720px"
+                 alt="Упаковка Skineform на кам'яному подіумі серед рослинних інгредієнтів"
+                 width="1200" height="896" loading="lazy" decoding="async" class="h-auto w-full" />
+          </figure>
+          <ul class="mt-4 grid grid-cols-4 gap-2" aria-label="Коротко про продукт">
+            <li class="flex flex-col items-center gap-1 rounded-2xl bg-white px-2 py-3 text-center shadow-sm ring-1 ring-emerald-100"><span class="text-2xl" aria-hidden="true">🍃</span><span class="text-xs font-bold leading-tight text-forest-800">10 рослинних компонентів</span></li>
+            <li class="flex flex-col items-center gap-1 rounded-2xl bg-white px-2 py-3 text-center shadow-sm ring-1 ring-emerald-100"><span class="text-2xl" aria-hidden="true">💊</span><span class="text-xs font-bold leading-tight text-forest-800">20 капсул × 400 мг</span></li>
+            <li class="flex flex-col items-center gap-1 rounded-2xl bg-white px-2 py-3 text-center shadow-sm ring-1 ring-emerald-100"><span class="text-2xl" aria-hidden="true">🕐</span><span class="text-xs font-bold leading-tight text-forest-800">1–2 капсули на день</span></li>
+            <li class="flex flex-col items-center gap-1 rounded-2xl bg-white px-2 py-3 text-center shadow-sm ring-1 ring-emerald-100"><span class="text-2xl" aria-hidden="true">💬</span><span class="text-xs font-bold leading-tight text-forest-800">Безкоштовна консультація</span></li>
+          </ul>
+        </div>
+        <div>
+        <h2 id="tasks" class="text-center font-serif lg:text-left text-2xl font-bold text-forest-900 sm:text-3xl">Для чого приймають Skineform</h2>
+        <p class="mx-auto mt-2 max-w-2xl text-center lg:mx-0 lg:text-left text-slate-600">Рослинна підтримка для тих, хто стежить за вагою, — без жорстких дієт і складних правил.</p>
+        <div class="mt-6 grid gap-3 sm:grid-cols-2 sm:gap-4">
+          <div class="flex gap-4 rounded-3xl bg-gradient-to-br from-emerald-600 to-forest-800 p-5 sm:block sm:p-6 text-white shadow-xl shadow-emerald-900/20">
+            <div class="flex h-12 shrink-0 w-12 items-center justify-center rounded-2xl bg-white/15 text-2xl" aria-hidden="true">⚖️</div>
+            <div><h3 class="sm:mt-4 text-lg font-extrabold leading-snug">Контроль ваги</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/90"><strong class="text-white">Гарцинію</strong> традиційно додають до раціону тих, хто стежить за вагою, — як доповнення до харчування й руху.</p></div>
           </div>
-          <div class="rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10 ring-1 ring-emerald-100">
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100 text-2xl" aria-hidden="true">🍽️</div>
-            <h3 class="mt-4 text-lg font-extrabold leading-snug text-forest-900">Режим харчування</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600">Легше тримати ритм, коли <strong class="text-forest-800">перекуси, пізні вечері й свята</strong> збивають звичний розклад.</p>
+          <div class="flex gap-4 rounded-3xl bg-white p-5 sm:block sm:p-6 shadow-lg shadow-emerald-900/10 ring-1 ring-emerald-100">
+            <div class="flex h-12 shrink-0 w-12 items-center justify-center rounded-2xl bg-amber-100 text-2xl" aria-hidden="true">🍽️</div>
+            <div><h3 class="sm:mt-4 text-lg font-extrabold leading-snug text-forest-900">Режим харчування</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Легше тримати ритм, коли <strong class="text-forest-800">перекуси, пізні вечері й свята</strong> збивають звичний розклад.</p></div>
           </div>
-          <div class="rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10 ring-1 ring-emerald-100">
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-mint-100 text-2xl" aria-hidden="true">🌿</div>
-            <h3 class="mt-4 text-lg font-extrabold leading-snug text-forest-900">Легкість після їжі</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600"><strong class="text-forest-800">Артишок, фенхель, ромашка й м'ята</strong> — трави, які традиційно додають для комфортного травлення.</p>
+          <div class="flex gap-4 rounded-3xl bg-white p-5 sm:block sm:p-6 shadow-lg shadow-emerald-900/10 ring-1 ring-emerald-100">
+            <div class="flex h-12 shrink-0 w-12 items-center justify-center rounded-2xl bg-mint-100 text-2xl" aria-hidden="true">🌿</div>
+            <div><h3 class="sm:mt-4 text-lg font-extrabold leading-snug text-forest-900">Легкість після їжі</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600"><strong class="text-forest-800">Артишок, фенхель, ромашка й м'ята</strong> — трави, які традиційно додають для комфортного травлення.</p></div>
           </div>
-          <div class="rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10 ring-1 ring-emerald-100">
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-100 text-2xl" aria-hidden="true">🍒</div>
-            <h3 class="mt-4 text-lg font-extrabold leading-snug text-forest-900">Вітамін C та антиоксиданти</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-600"><strong class="text-forest-800">Ацерола</strong> — природне джерело вітаміну C, <strong class="text-forest-800">виноградні кісточки</strong> — поліфенолів.</p>
+          <div class="flex gap-4 rounded-3xl bg-white p-5 sm:block sm:p-6 shadow-lg shadow-emerald-900/10 ring-1 ring-emerald-100">
+            <div class="flex h-12 shrink-0 w-12 items-center justify-center rounded-2xl bg-rose-100 text-2xl" aria-hidden="true">🍒</div>
+            <div><h3 class="sm:mt-4 text-lg font-extrabold leading-snug text-forest-900">Вітамін C та антиоксиданти</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600"><strong class="text-forest-800">Ацерола</strong> — природне джерело вітаміну C, <strong class="text-forest-800">виноградні кісточки</strong> — поліфенолів.</p></div>
           </div>
         </div>
-        <p class="mt-4 text-center text-xs leading-relaxed text-slate-500">Skineform — дієтична добавка, а не лікарський засіб. Вона не замінює збалансоване харчування й рух; результат індивідуальний.</p>
+                <p class="mt-4 text-center text-xs lg:text-left leading-relaxed text-slate-500">Skineform — дієтична добавка, а не лікарський засіб. Вона не замінює збалансоване харчування й рух; результат індивідуальний.</p>
+              </div>
       </section>
 
       <!-- ОПИС + редакційна примітка -->
