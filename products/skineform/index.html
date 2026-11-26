@@ -126,7 +126,9 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1695404558601030');
+  // Стабільний анонімний ID відвідувача → external_id (той самий іде з сервера в CAPI)
+  window.uhVid = (function(){try{var v=localStorage.getItem('uh_vid');if(!v){v='v-'+Date.now()+'-'+Math.random().toString(36).slice(2,10);localStorage.setItem('uh_vid',v);}return v;}catch(e){return '';}})();
+  fbq('init', '1695404558601030', window.uhVid ? {external_id: window.uhVid} : {});
   fbq('track', 'PageView');
   fbq('track', 'ViewContent', {content_name: 'Skineform', content_category: 'Огляд'});
   </script>
@@ -690,7 +692,7 @@
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name: name, phone: phone, website: form.elements["website"].value, offer: OFFER_KEY,
-                                   event_id: eventId, fbp: cookie("_fbp"), fbc: fbc(), page_url: location.href })
+                                   event_id: eventId, fbp: cookie("_fbp"), fbc: fbc(), vid: window.uhVid || "", page_url: location.href })
           }).then(function (r) {
             return r.text().then(function (txt) {
               var data = null;
